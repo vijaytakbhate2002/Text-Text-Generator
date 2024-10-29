@@ -74,14 +74,18 @@ class TextGenerator(GeneratorAbstract):
     
     @staticmethod
     def clean_text(text):
+        logging.info("Text cleaning started...")
         text = re.sub(r'\s+', ' ', text).strip()
+        logging.info("Text stripping is done...")
         text = re.sub(r'[^a-zA-Z0-9.,!?\'\"\s]', '', text)
         logging.info("Text cleaned sucessfully...")
         return text
     
     def parse_chunks(self):
         try:
+            logging.info("Trying to parse chunks...")
             for chunk in self.completion:
+                logging.info("Chunks parsed sucessfully...")
                 if chunk.choices[0].delta.content is not None:
                     logging.info(f"Parsed for {chunk.choices[0].delta.content} ...")
                     self.outputText += chunk.choices[0].delta.content
@@ -98,4 +102,19 @@ class TextGenerator(GeneratorAbstract):
         except Exception as e:
             logging.error(f"Text cleaning failed for output_text '{self.outputText}': {str(e)}")
             raise Exception(f"text cleaning is failed for output_text {self.outputText}")
+
+if __name__ == "__main__":
+    # API_KEY = "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"
+    API_KEY = "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"
+    MODEL_NAME = ""
+    while True:
+        row_user_input = input("Ask me anything ...\n")
+        # row_user_input = """Today I have did some data processsing using Spark. I explore few transformations functions and tried to apply them for optimize our data work flows, it's really interesting! The speed and scalability of Spark makes it one of the best tool for big data analysis. Excited to learning more on this journey!"""
+        prompt = row_user_input
+        if row_user_input == 'stop':
+            break
+        generator = TextGenerator(api=API_KEY)
+        generator.create_client()
+        generator.build_completion(user_input=prompt)
+        generator.generate()
 

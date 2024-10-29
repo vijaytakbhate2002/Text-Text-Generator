@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +23,53 @@
             background-color: #f5f5f5;
         }
 
-        .chat-container {
-            width: 80%;
-            max-width: 600px;
-            height: 90vh;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 0 0 8px;
             display: flex;
             flex-direction: column;
+            gap: 15px;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar button:hover {
+            background-color: #004d40;
+        }
+
+        /* Main chat container styling */
+        .main-container {
+            display: flex;
+            width: 80%;
+            max-width: 800px;
+            height: 90vh;
+            border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-container {
+            flex: 1;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
         }
 
         .chat-box {
@@ -73,7 +111,7 @@
 
         .input-container form {
             display: flex;
-            flex: 1; /* This allows the form to take full width of the container */
+            flex: 1;
         }
 
         .input-container input[type="text"] {
@@ -104,36 +142,70 @@
         /* Updated watermark styling */
         .watermark {
             position: fixed;
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust for text size */
-            font-size: 5em; /* Make the text bigger */
-            color: rgba(108, 97, 97, 0.5); /* Bright red for testing */
-            pointer-events: none; /* Allows clicks to pass through the watermark */
-            z-index: 0; /* Set to 0 to ensure it appears above background elements */
-            user-select: none; /* Prevents user from selecting the watermark */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            color: rgba(108, 97, 97, 0.5);
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
         }
     </style>
 </head>
+
 <body>
 
-<div class="chat-container">
-    <div class="chat-box">
-        <!-- Sample bot message -->
-        <div class="message bot-message">{{ response }}</div>
-    </div>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <form action="/task" method="POST" id="actionForm">
+                <label>
+                    <input type="radio" name="action" value="Paraphraser" required>
+                    <button type="submit"><span>🔄</span> Paraphraser</button>
+                </label>
+                <label>
+                    <input type="radio" name="action" value="Grammar Checker" required>
+                    <button type="submit"><span>✍️</span> Grammar Checker</button>
+                </label>
+                <label>
+                    <input type="radio" name="action" value="AI Detector" required>
+                    <button type="submit"><span>🤖</span> AI Detector</button>
+                </label>
+                <label>
+                    <input type="radio" name="action" value="Plagiarism Checker" required>
+                    <button type="submit"><span>📑</span> Plagiarism Checker</button>
+                </label>
+                <label>
+                    <input type="radio" name="action" value="Summarizer" required>
+                    <button type="submit"><span>📝</span> Summarizer</button>
+                </label>
+                <!-- Clear selection button -->
+                <button type="button" id="clearButton" onclick="clearSelection()">❌ Clear Selection</button>
+            </form>
+        </div>
+        
 
-    <!-- Input container -->
-    <div class="input-container">
-        <form action="/query" method="POST" style="flex: 1; display: flex;">
-            <input type="text" name="user_input" placeholder="Ask me something ..." required>
-            <button type="submit">Send</button>
-        </form> 
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-box">
+                <!-- Sample bot message -->
+                <div class="message bot-message">{{ response }}</div>
+            </div>
+
+            <!-- Input container -->
+            <div class="input-container">
+                <form action="/query" method="POST">
+                    <input type="text" name="user_input" placeholder="Ask me something ..." required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+            <!-- Watermark -->
+            <div class="watermark">GPT</div>
+        </div>
     </div>
-    
-    <!-- Watermark -->
-    <div class="watermark">GPT</div>
-</div>
 
 </body>
+
 </html>
