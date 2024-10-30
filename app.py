@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from text_process.text_generator import TextGenerator
-from config import data
-
+import json
 import logging
 logging.basicConfig(
     filename="model_log.log",
@@ -9,6 +8,9 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
 )
+
+with open("data.json", 'r') as file:
+    data = json.load(file)
 
 app = Flask(__name__)
 
@@ -21,6 +23,7 @@ PROMPT = ""
 def user_option():
     global TASK, PROMPT
     TASK = request.form.get("action") 
+    logging.info(f"Task generation successfull selected task is = {TASK}")
     PROMPT = data[TASK] if TASK in data and TASK is not None else ''
     return render_template("chat.html")
 
@@ -53,4 +56,4 @@ def home_page():
     return render_template("user_log_in.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)

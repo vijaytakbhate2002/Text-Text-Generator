@@ -5,186 +5,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Clone</title>
-    <style>
-        /* Basic reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Container styling */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-
-        /* Sidebar styling */
-        .sidebar {
-            width: 200px;
-            background-color: #00796b;
-            color: white;
-            padding: 20px;
-            border-radius: 8px 0 0 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .sidebar button:hover {
-            background-color: #004d40;
-        }
-
-        /* Main chat container styling */
-        .main-container {
-            display: flex;
-            width: 80%;
-            max-width: 800px;
-            height: 90vh;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .chat-container {
-            flex: 1;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .chat-box {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* User and bot message styling */
-        .message {
-            padding: 10px 15px;
-            border-radius: 15px;
-            max-width: 75%;
-            line-height: 1.5;
-        }
-
-        .user-message {
-            align-self: flex-end;
-            background-color: #e0f7fa;
-            color: #00796b;
-        }
-
-        .bot-message {
-            align-self: flex-start;
-            background-color: #eeeeee;
-            color: #333;
-        }
-
-        /* Input area styling */
-        .input-container {
-            display: flex;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-
-        .input-container form {
-            display: flex;
-            flex: 1;
-        }
-
-        .input-container input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 20px;
-            outline: none;
-            font-size: 1em;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .input-container button {
-            margin-left: 10px;
-            padding: 10px 15px;
-            background-color: #00796b;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .input-container button:hover {
-            background-color: #004d40;
-        }
-
-        /* Updated watermark styling */
-        .watermark {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 5em;
-            color: rgba(108, 97, 97, 0.5);
-            pointer-events: none;
-            z-index: 0;
-            user-select: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+    }
+    
+    .sidebar {
+        width: 200px;
+        background-color: #00796b;
+        color: rgb(23, 22, 22);
+        padding: 20px;
+        border-radius: 8px 0 0 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar button {
+        background: none;
+        border: none;
+        color: rgb(14, 13, 13);
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    
+    .sidebar button:hover {
+        background-color: #004d40;
+    }
+    
+    .main-container {
+        display: flex;
+        width: 80%;
+        max-width: 800px;
+        height: 90vh;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .chat-container {
+        flex: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .chat-box {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .message {
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 75%;
+        line-height: 1.5;
+    }
+    
+    .user-message {
+        align-self: flex-end;
+        background-color: #e0f7fa;
+        color: #00796b;
+    }
+    
+    .bot-message {
+        align-self: flex-start;
+        background-color: #eeeeee;
+        color: #333;
+    }
+    
+    .input-container {
+        display: flex;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+    
+    .input-container form {
+        display: flex;
+        flex: 1;
+    }
+    
+    .input-container input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .input-container button {
+        margin-left: 10px;
+        padding: 10px 15px;
+        background-color: #00796b;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .input-container button:hover {
+        background-color: #004d40;
+    }
+    
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        color: rgba(108, 97, 97, 0.5);
+        pointer-events: none;
+        z-index: 0;
+        user-select: none;
+    }
+    .sidebar button {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 16px;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .sidebar button.active {
+        background-color: #00796b;
+        color: #d5bdbd;
+    }
 
+    #clearButton {
+        background-color: #ff4d4d;
+        color: #fff;
+    }
+</style>
+<script>
+    function selectAction(action) {
+        const buttons = document.querySelectorAll(".sidebar button");
+        buttons.forEach(button => button.classList.remove("active"));
+        
+        document.getElementById("selectedAction").value = action;
+        event.target.classList.add("active");
+    }
+    
+    function clearSelection() {
+        const buttons = document.querySelectorAll(".sidebar button");
+        buttons.forEach(button => button.classList.remove("active"));
+        document.getElementById("selectedAction").value = "";
+    }
+    
+</script>
 <body>
 
     <div class="main-container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <form action="/task" method="POST" id="actionForm">
-                <label>
-                    <input type="radio" name="action" value="Paraphraser" required>
-                    <button type="submit"><span>🔄</span> Paraphraser</button>
-                </label>
-                <label>
-                    <input type="radio" name="action" value="Grammar Checker" required>
-                    <button type="submit"><span>✍️</span> Grammar Checker</button>
-                </label>
-                <label>
-                    <input type="radio" name="action" value="AI Detector" required>
-                    <button type="submit"><span>🤖</span> AI Detector</button>
-                </label>
-                <label>
-                    <input type="radio" name="action" value="Plagiarism Checker" required>
-                    <button type="submit"><span>📑</span> Plagiarism Checker</button>
-                </label>
-                <label>
-                    <input type="radio" name="action" value="Summarizer" required>
-                    <button type="submit"><span>📝</span> Summarizer</button>
-                </label>
-                <!-- Clear selection button -->
-                <button type="button" id="clearButton" onclick="clearSelection()">❌ Clear Selection</button>
+                <button type="submit" onclick="selectAction('Paraphraser')"><span>🔄</span> Paraphraser</button>
+                <button type="submit" onclick="selectAction('Grammar Checker')"><span>✍️</span> Grammar Checker</button>
+                <button type="submit" onclick="selectAction('AI Detector')"><span>🤖</span> AI Detector</button>
+                <button type="submit" onclick="selectAction('Plagiarism Checker')"><span>📑</span> Plagiarism
+                    Checker</button>
+                <button type="submit" onclick="selectAction('Summarizer')"><span>📝</span> Summarizer</button>
+                <button type="submit" onclick="selectAction('Short Answer')"><span>🔄</span> Short Answer</button>
+
+                <button type="submit" id="clearButton" onclick="clearSelection()">💬 Just Chat</button>
+
+                <input type="hidden" name="action" id="selectedAction">
             </form>
         </div>
-        
 
         <!-- Chat Container -->
         <div class="chat-container">
@@ -205,7 +223,6 @@
             <div class="watermark">GPT</div>
         </div>
     </div>
-
 </body>
 
 </html>
