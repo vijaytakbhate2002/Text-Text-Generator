@@ -74,11 +74,11 @@ class TextGenerator(GeneratorAbstract):
     
     @staticmethod
     def clean_text(text):
-        logging.info("Text cleaning started...")
-        text = re.sub(r'\s+', ' ', text).strip()
-        logging.info("Text stripping is done...")
-        text = re.sub(r'[^a-zA-Z0-9.,!?\'\"\s]', '', text)
-        logging.info("Text cleaned sucessfully...")
+        # logging.info("Text cleaning started...")
+        # text = re.sub(r'\s+', ' ', text).strip()
+        # logging.info("Text stripping is done...")
+        # text = re.sub(r'[^a-zA-Z0-9.,!?\'\"\s]', '', text)
+        # logging.info("Text cleaned sucessfully...")
         return text
     
     def parse_chunks(self):

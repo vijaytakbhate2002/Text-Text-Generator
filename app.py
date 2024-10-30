@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 from text_process.text_generator import TextGenerator
 import json
 import logging
+import jinja2
+
 logging.basicConfig(
     filename="model_log.log",
     level=logging.INFO, 
@@ -19,19 +21,35 @@ API_KEY = None
 TASK = None
 PROMPT = ""
 
+@app.route('/about')
+def about():
+    logging.info("about page is loading ...")
+    return render_template('about.html')
+
+@app.route('/features')
+def features():
+    logging.info("features page is loading ...")
+    return render_template('features.html')
+
+@app.route('/contact')
+def contact():
+    logging.info("contact page is loading ...")
+    return render_template('contact.html')
+
 @app.route("/task", methods=['POST'])
 def user_option():
     global TASK, PROMPT
     TASK = request.form.get("action") 
     logging.info(f"Task generation successfull selected task is = {TASK}")
     PROMPT = data[TASK] if TASK in data and TASK is not None else ''
+    logging.info("task page is loading ...")
     return render_template("chat.html")
 
 @app.route("/api-access", methods=['POST'])
 def api_access():
     global MODEL, API_KEY  
-    MODEL = request.form.get("model_name")
     API_KEY = request.form.get("api_key")
+    logging.info(f"api access successfull with api = {API_KEY}")
     return render_template("chat.html")
 
 @app.route("/query", methods=['POST'])
@@ -53,6 +71,7 @@ def text_processor():
 
 @app.route("/")
 def home_page():
+    logging.info("home page is loading ...")
     return render_template("user_log_in.html")
 
 if __name__ == "__main__":

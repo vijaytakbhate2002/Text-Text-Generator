@@ -255,23 +255,6 @@
         color: #e0f7fa;
     }
 </style> 
-<script>
-    function selectAction(action) {
-        const buttons = document.querySelectorAll(".sidebar button");
-        buttons.forEach(button => button.classList.remove("active"));
-
-        document.getElementById("selectedAction").value = action;
-        event.target.classList.add("active");
-    }
-
-    function clearSelection() {
-        const buttons = document.querySelectorAll(".sidebar button");
-        buttons.forEach(button => button.classList.remove("active"));
-        document.getElementById("selectedAction").value = "";
-    }
-
-</script>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -284,7 +267,7 @@
 
             <!-- Links -->
             <ul class="navbar-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li> 
                 <li><a href="{{ url_for('features') }}">Features</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
@@ -293,43 +276,6 @@
         </div>
     </nav>
 
-    <div class="main-container">
-        <div class="sidebar">
-            <form action="/task" method="POST" id="actionForm">
-                <button type="submit" onclick="selectAction('Paraphraser')"><span>🔄</span> Paraphraser</button>
-                <button type="submit" onclick="selectAction('Grammar Checker')"><span>✍️</span> Grammar
-                    Checker</button>
-                <button type="submit" onclick="selectAction('AI Detector')"><span>🤖</span> AI Detector</button>
-                <button type="submit" onclick="selectAction('Plagiarism Checker')"><span>📑</span> Plagiarism
-                    Checker</button>
-                <button type="submit" onclick="selectAction('Summarizer')"><span>📝</span> Summarizer</button>
-                <button type="submit" onclick="selectAction('Short Answer')"><span>🔄</span> Short Answer</button>
-
-                <button type="submit" id="clearButton" onclick="clearSelection()">💬 Just Chat</button>
-
-                <input type="hidden" name="action" id="selectedAction">
-            </form>
-        </div>
-
-        <!-- Chat Container -->
-        <div class="chat-container">
-            <div class="chat-box">
-                <!-- Sample bot message -->
-                <div class="message bot-message">{{ response }}</div>
-            </div>
-
-            <!-- Input container -->
-            <div class="input-container">
-                <form action="/query" method="POST">
-                    <input type="text" name="user_input" placeholder="Ask me something ..." required>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-
-            <!-- Watermark -->
-            <div class="watermark">chat-bot</div>
-        </div>
-    </div>
 </body>
 
 </html>
