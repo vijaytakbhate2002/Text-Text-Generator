@@ -4549,3 +4549,1540 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'home'.
 2024-10-31 00:54:45 - INFO - Output generated successfully...
 2024-10-31 00:54:45 - INFO - Response Generated successfully..
 2024-10-31 00:54:45 - INFO - 127.0.0.1 - - [31/Oct/2024 00:54:45] "POST /query HTTP/1.1" 200 -
+2024-10-31 01:32:41 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 01:32:41 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 01:32:45 - INFO - home page is loading ...
+2024-10-31 01:32:45 - INFO - 127.0.0.1 - - [31/Oct/2024 01:32:45] "GET / HTTP/1.1" 200 -
+2024-10-31 15:18:43 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 15:18:43 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:18:43 - INFO -  * Restarting with stat
+2024-10-31 15:18:44 - WARNING -  * Debugger is active!
+2024-10-31 15:18:44 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 15:19:35 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 15:19:35 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:19:51 - INFO - home page is loading ...
+2024-10-31 15:19:52 - INFO - 127.0.0.1 - - [31/Oct/2024 15:19:52] "GET / HTTP/1.1" 200 -
+2024-10-31 15:20:01 - INFO - api access successfull with api = mmm 
+2024-10-31 15:20:01 - INFO - 127.0.0.1 - - [31/Oct/2024 15:20:01] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:20:01 - INFO - 127.0.0.1 - - [31/Oct/2024 15:20:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:20:07 - INFO - about page is loading ...
+2024-10-31 15:20:07 - ERROR - Exception on /about [GET]
+Traceback (most recent call last):
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\app.py", line 27, in about
+    return render_template('about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Projects\NVIDIA_FLASK_APP\templates\about.html", line 2, in template
+    {% bolck title %} ChatGPT Clone About {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'bolck'.
+2024-10-31 15:20:08 - INFO - 127.0.0.1 - - [31/Oct/2024 15:20:08] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 15:25:09 - INFO - about page is loading ...
+2024-10-31 15:25:09 - ERROR - Exception on /about [GET]
+Traceback (most recent call last):
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\app.py", line 27, in about
+    return render_template('about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Projects\NVIDIA_FLASK_APP\templates\about.html", line 2, in template
+    {% bolck title %} ChatGPT Clone About {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'bolck'.
+2024-10-31 15:25:09 - INFO - 127.0.0.1 - - [31/Oct/2024 15:25:09] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 15:25:10 - INFO - about page is loading ...
+2024-10-31 15:25:10 - ERROR - Exception on /about [GET]
+Traceback (most recent call last):
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\app.py", line 27, in about
+    return render_template('about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Projects\NVIDIA_FLASK_APP\templates\about.html", line 2, in template
+    {% bolck title %} ChatGPT Clone About {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'bolck'.
+2024-10-31 15:25:10 - INFO - 127.0.0.1 - - [31/Oct/2024 15:25:10] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 15:25:15 - INFO - api access successfull with api = mmm 
+2024-10-31 15:25:15 - INFO - 127.0.0.1 - - [31/Oct/2024 15:25:15] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:25:15 - INFO - 127.0.0.1 - - [31/Oct/2024 15:25:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:25:17 - INFO - about page is loading ...
+2024-10-31 15:25:17 - ERROR - Exception on /about [GET]
+Traceback (most recent call last):
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\app.py", line 27, in about
+    return render_template('about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "E:\Projects\NVIDIA_FLASK_APP\env\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\Projects\NVIDIA_FLASK_APP\templates\about.html", line 2, in template
+    {% bolck title %} ChatGPT Clone About {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'bolck'.
+2024-10-31 15:25:17 - INFO - 127.0.0.1 - - [31/Oct/2024 15:25:17] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 15:27:58 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 15:27:58 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:27:58 - INFO -  * Restarting with stat
+2024-10-31 15:27:59 - WARNING -  * Debugger is active!
+2024-10-31 15:27:59 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 15:28:03 - INFO - home page is loading ...
+2024-10-31 15:28:03 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:03] "GET / HTTP/1.1" 200 -
+2024-10-31 15:28:10 - INFO - api access successfull with api = sfsdfsdf
+2024-10-31 15:28:10 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:10] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:28:10 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:10] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:28:13 - INFO - about page is loading ...
+2024-10-31 15:28:13 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:13] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 15:28:13 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:13] "GET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-31 15:28:14 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:14] "GET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-31 15:28:14 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:14] "GET /about?__debugger__=yes&cmd=resource&f=console.png&s=wHFrVQ0qFCN4XWmtNgJR HTTP/1.1" 200 -
+2024-10-31 15:28:14 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:14] "GET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-31 15:28:48 - INFO - about page is loading ...
+2024-10-31 15:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:48] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:28:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:30:43 - INFO - features page is loading ...
+2024-10-31 15:30:43 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:43] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:30:43 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:43] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:30:45 - INFO - contact page is loading ...
+2024-10-31 15:30:45 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:45] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:30:46 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:46] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:30:50 - INFO - about page is loading ...
+2024-10-31 15:30:50 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:50] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:30:50 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:50] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:30:51 - INFO - features page is loading ...
+2024-10-31 15:30:51 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:51] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:30:52 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:30:53 - INFO - contact page is loading ...
+2024-10-31 15:30:53 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:53] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:30:53 - INFO - 127.0.0.1 - - [31/Oct/2024 15:30:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:10 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 15:32:10 - INFO -  * Restarting with stat
+2024-10-31 15:32:11 - WARNING -  * Debugger is active!
+2024-10-31 15:32:11 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 15:32:15 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 15:32:15 - INFO -  * Restarting with stat
+2024-10-31 15:32:17 - WARNING -  * Debugger is active!
+2024-10-31 15:32:17 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 15:32:24 - INFO - about page is loading ...
+2024-10-31 15:32:24 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:24] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:32:24 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:27 - INFO - about page is loading ...
+2024-10-31 15:32:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:27] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:32:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:42 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 15:32:42 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:32:45 - INFO - about page is loading ...
+2024-10-31 15:32:45 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:45] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:32:45 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:45] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:50 - INFO - home page is loading ...
+2024-10-31 15:32:50 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:50] "GET / HTTP/1.1" 200 -
+2024-10-31 15:32:54 - INFO - api access successfull with api = fhfgh
+2024-10-31 15:32:54 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:54] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:32:54 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:55 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:55] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:32:55 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:57 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:57] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:32:57 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:57] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:32:58 - INFO - about page is loading ...
+2024-10-31 15:32:58 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:58] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:32:58 - INFO - 127.0.0.1 - - [31/Oct/2024 15:32:58] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:46:56 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 15:46:56 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:47:00 - INFO - home page is loading ...
+2024-10-31 15:47:00 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:00] "GET / HTTP/1.1" 200 -
+2024-10-31 15:47:03 - INFO - api access successfull with api = sdfsd
+2024-10-31 15:47:04 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:04] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:47:04 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:04] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:47:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:47:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:47:53 - INFO - about page is loading ...
+2024-10-31 15:47:53 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:53] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:47:54 - INFO - 127.0.0.1 - - [31/Oct/2024 15:47:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:48:00 - INFO - about page is loading ...
+2024-10-31 15:48:00 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:00] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:48:01 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:48:02 - INFO - features page is loading ...
+2024-10-31 15:48:02 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:02] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:48:02 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:02] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:48:04 - INFO - contact page is loading ...
+2024-10-31 15:48:04 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:04] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:48:05 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:05] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:48:27 - INFO - about page is loading ...
+2024-10-31 15:48:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:27] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:48:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:48:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:49:36 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 15:49:36 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:49:41 - INFO - home page is loading ...
+2024-10-31 15:49:41 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:41] "GET / HTTP/1.1" 200 -
+2024-10-31 15:49:45 - INFO - api access successfull with api = sdfsdf
+2024-10-31 15:49:45 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:45] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:49:45 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:45] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:49:47 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:47] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:49:47 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:49:48 - INFO - about page is loading ...
+2024-10-31 15:49:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:48] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:49:48 - INFO - 127.0.0.1 - - [31/Oct/2024 15:49:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:50:16 - INFO - home page is loading ...
+2024-10-31 15:50:16 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:16] "GET / HTTP/1.1" 200 -
+2024-10-31 15:50:20 - INFO - api access successfull with api = u
+2024-10-31 15:50:20 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:20] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:50:20 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:50:22 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:22] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:50:22 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:22] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:50:23 - INFO - about page is loading ...
+2024-10-31 15:50:23 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:23] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:50:23 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:50:26 - INFO - features page is loading ...
+2024-10-31 15:50:26 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:26] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:50:26 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:26] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:50:27 - INFO - contact page is loading ...
+2024-10-31 15:50:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:27] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:50:28 - INFO - 127.0.0.1 - - [31/Oct/2024 15:50:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:51:05 - INFO - home page is loading ...
+2024-10-31 15:51:05 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:05] "GET / HTTP/1.1" 200 -
+2024-10-31 15:51:09 - INFO - api access successfull with api = i
+2024-10-31 15:51:09 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:09] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:51:09 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:09] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:51:10 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:10] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:51:11 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:51:12 - INFO - about page is loading ...
+2024-10-31 15:51:12 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:12] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:51:12 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:12] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:51:13 - INFO - features page is loading ...
+2024-10-31 15:51:13 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:13] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:51:13 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:51:14 - INFO - contact page is loading ...
+2024-10-31 15:51:14 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:14] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:51:15 - INFO - 127.0.0.1 - - [31/Oct/2024 15:51:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:21 - INFO - home page is loading ...
+2024-10-31 15:52:21 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:21] "GET / HTTP/1.1" 200 -
+2024-10-31 15:52:24 - INFO - api access successfull with api = d
+2024-10-31 15:52:24 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:24] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 15:52:24 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:25 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:25] "GET /home HTTP/1.1" 200 -
+2024-10-31 15:52:25 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:25] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:27 - INFO - about page is loading ...
+2024-10-31 15:52:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:27] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:52:27 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:28 - INFO - features page is loading ...
+2024-10-31 15:52:28 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:28] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:52:29 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:29] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:30 - INFO - contact page is loading ...
+2024-10-31 15:52:30 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:30] "GET /contact HTTP/1.1" 200 -
+2024-10-31 15:52:30 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:30] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:34 - INFO - features page is loading ...
+2024-10-31 15:52:34 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:34] "GET /features HTTP/1.1" 200 -
+2024-10-31 15:52:34 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:34] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:52:36 - INFO - about page is loading ...
+2024-10-31 15:52:36 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:36] "GET /about HTTP/1.1" 200 -
+2024-10-31 15:52:36 - INFO - 127.0.0.1 - - [31/Oct/2024 15:52:36] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 15:56:30 - INFO - home page is loading ...
+2024-10-31 15:56:30 - INFO - 127.0.0.1 - - [31/Oct/2024 15:56:30] "GET / HTTP/1.1" 200 -
+2024-10-31 16:07:15 - INFO - home page is loading ...
+2024-10-31 16:07:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:07:15] "GET / HTTP/1.1" 200 -
+2024-10-31 16:41:09 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 16:41:09 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 16:41:15 - INFO - home page is loading ...
+2024-10-31 16:41:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:41:15] "GET / HTTP/1.1" 200 -
+2024-10-31 16:44:06 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 16:44:06 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 16:44:06 - INFO -  * Restarting with stat
+2024-10-31 16:44:08 - WARNING -  * Debugger is active!
+2024-10-31 16:44:08 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:44:13 - INFO - home page is loading ...
+2024-10-31 16:44:13 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:13] "GET / HTTP/1.1" 200 -
+2024-10-31 16:44:22 - INFO - home page is loading ...
+2024-10-31 16:44:22 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:22] "GET / HTTP/1.1" 200 -
+2024-10-31 16:44:28 - INFO - api access successfull with api = jjh
+2024-10-31 16:44:28 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:28] "[35m[1mPOST /api-access HTTP/1.1[0m" 500 -
+2024-10-31 16:44:28 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:28] "GET /api-access?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-31 16:44:29 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:29] "GET /api-access?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-31 16:44:29 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:29] "GET /api-access?__debugger__=yes&cmd=resource&f=console.png&s=aSfxYabI14K64k0R21f0 HTTP/1.1" 200 -
+2024-10-31 16:44:29 - INFO - 127.0.0.1 - - [31/Oct/2024 16:44:29] "GET /api-access?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-31 16:45:27 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 16:45:27 - INFO -  * Restarting with stat
+2024-10-31 16:45:29 - WARNING -  * Debugger is active!
+2024-10-31 16:45:29 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:45:43 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 16:45:44 - INFO -  * Restarting with stat
+2024-10-31 16:45:45 - WARNING -  * Debugger is active!
+2024-10-31 16:45:45 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:46:01 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 16:46:01 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 16:46:01 - INFO -  * Restarting with stat
+2024-10-31 16:46:05 - WARNING -  * Debugger is active!
+2024-10-31 16:46:05 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:46:08 - INFO - api access successfull with api = jjh
+2024-10-31 16:46:08 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:08] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 16:46:08 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:08] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:13] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:46:15 - INFO - about page is loading ...
+2024-10-31 16:46:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:15] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:46:16 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:16] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:46:17 - INFO - features page is loading ...
+2024-10-31 16:46:17 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:17] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:46:17 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:46:24 - INFO - contact page is loading ...
+2024-10-31 16:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:24] "GET /contact HTTP/1.1" 200 -
+2024-10-31 16:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:46:26 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:26] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:46:26 - INFO - 127.0.0.1 - - [31/Oct/2024 16:46:26] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:48:44 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 16:48:44 - INFO -  * Restarting with stat
+2024-10-31 16:48:47 - WARNING -  * Debugger is active!
+2024-10-31 16:48:47 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:48:50 - INFO - 127.0.0.1 - - [31/Oct/2024 16:48:50] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2024-10-31 16:48:51 - INFO - 127.0.0.1 - - [31/Oct/2024 16:48:51] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-31 16:48:51 - INFO - 127.0.0.1 - - [31/Oct/2024 16:48:51] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-31 16:48:52 - INFO - 127.0.0.1 - - [31/Oct/2024 16:48:52] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=piBLKqTVDbKWcqoYup7G HTTP/1.1" 200 -
+2024-10-31 16:48:52 - INFO - 127.0.0.1 - - [31/Oct/2024 16:48:52] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-31 16:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 16:49:53] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 16:49:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:51:36 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:36] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:51:36 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:36] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:51:37 - INFO - about page is loading ...
+2024-10-31 16:51:37 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:37] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 16:51:37 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:37] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-10-31 16:51:38 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:38] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-10-31 16:51:38 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:38] "GET /about?__debugger__=yes&cmd=resource&f=console.png&s=piBLKqTVDbKWcqoYup7G HTTP/1.1" 200 -
+2024-10-31 16:51:38 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:38] "[36mGET /about?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-10-31 16:51:44 - INFO - features page is loading ...
+2024-10-31 16:51:44 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:44] "[35m[1mGET /features HTTP/1.1[0m" 500 -
+2024-10-31 16:51:44 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:44] "GET /features?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-31 16:51:45 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:45] "GET /features?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-31 16:51:45 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:45] "GET /features?__debugger__=yes&cmd=resource&f=console.png&s=piBLKqTVDbKWcqoYup7G HTTP/1.1" 200 -
+2024-10-31 16:51:45 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:45] "GET /features?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-31 16:51:47 - INFO - contact page is loading ...
+2024-10-31 16:51:47 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:47] "[35m[1mGET /contact HTTP/1.1[0m" 500 -
+2024-10-31 16:51:48 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:48] "GET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-31 16:51:48 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:48] "GET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-31 16:51:48 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:48] "GET /contact?__debugger__=yes&cmd=resource&f=console.png&s=piBLKqTVDbKWcqoYup7G HTTP/1.1" 200 -
+2024-10-31 16:51:48 - INFO - 127.0.0.1 - - [31/Oct/2024 16:51:48] "GET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-31 16:52:02 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 16:52:02 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 16:52:02 - INFO -  * Restarting with stat
+2024-10-31 16:52:04 - WARNING -  * Debugger is active!
+2024-10-31 16:52:04 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:52:10 - INFO - contact page is loading ...
+2024-10-31 16:52:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:10] "[35m[1mGET /contact HTTP/1.1[0m" 500 -
+2024-10-31 16:52:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:10] "[36mGET /contact?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-10-31 16:52:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:10] "[36mGET /contact?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-10-31 16:52:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:10] "GET /contact?__debugger__=yes&cmd=resource&f=console.png&s=HCb1WYrn4Ned8OKa6UoL HTTP/1.1" 200 -
+2024-10-31 16:52:11 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:11] "[36mGET /contact?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-10-31 16:52:14 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:14] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2024-10-31 16:52:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:15] "[36mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-10-31 16:52:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:15] "[36mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-10-31 16:52:15 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:15] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=HCb1WYrn4Ned8OKa6UoL HTTP/1.1" 200 -
+2024-10-31 16:52:16 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:16] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-10-31 16:52:55 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.47:5000
+2024-10-31 16:52:55 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 16:52:55 - INFO -  * Restarting with stat
+2024-10-31 16:52:58 - WARNING -  * Debugger is active!
+2024-10-31 16:52:58 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 16:52:58 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:58] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:52:59 - INFO - 127.0.0.1 - - [31/Oct/2024 16:52:59] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:53:01 - INFO - about page is loading ...
+2024-10-31 16:53:01 - INFO - 127.0.0.1 - - [31/Oct/2024 16:53:01] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2024-10-31 16:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 16:53:02] "[36mGET /about?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-10-31 16:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 16:53:02] "[36mGET /about?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-10-31 16:53:03 - INFO - 127.0.0.1 - - [31/Oct/2024 16:53:03] "GET /about?__debugger__=yes&cmd=resource&f=console.png&s=Ny3wirglWPcE2Aqbo2UO HTTP/1.1" 200 -
+2024-10-31 16:54:06 - INFO - about page is loading ...
+2024-10-31 16:54:06 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:06] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:54:06 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:09 - INFO - about page is loading ...
+2024-10-31 16:54:09 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:09] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:54:09 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:09] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:10 - INFO - features page is loading ...
+2024-10-31 16:54:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:10] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:54:10 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:10] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:11 - INFO - contact page is loading ...
+2024-10-31 16:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:11] "GET /contact HTTP/1.1" 200 -
+2024-10-31 16:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:12 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:12] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:54:12 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:12] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:39 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:39] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:54:39 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:39] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:46 - INFO - about page is loading ...
+2024-10-31 16:54:46 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:46] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:54:47 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:49 - INFO - features page is loading ...
+2024-10-31 16:54:49 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:49] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:54:49 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:49] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:52 - INFO - about page is loading ...
+2024-10-31 16:54:52 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:52] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:54:52 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:52 - INFO - features page is loading ...
+2024-10-31 16:54:52 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:52] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:54:53 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:54:55 - INFO - contact page is loading ...
+2024-10-31 16:54:55 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:55] "GET /contact HTTP/1.1" 200 -
+2024-10-31 16:54:55 - INFO - 127.0.0.1 - - [31/Oct/2024 16:54:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:43 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:43] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:55:44 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:44] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:45 - INFO - about page is loading ...
+2024-10-31 16:55:45 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:45] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:55:45 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:45] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:47 - INFO - features page is loading ...
+2024-10-31 16:55:47 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:47] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:55:47 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:49 - INFO - about page is loading ...
+2024-10-31 16:55:49 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:49] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:55:49 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:49] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:53 - INFO - contact page is loading ...
+2024-10-31 16:55:53 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:53] "GET /contact HTTP/1.1" 200 -
+2024-10-31 16:55:53 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:55:54 - INFO - about page is loading ...
+2024-10-31 16:55:54 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:54] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:55:55 - INFO - 127.0.0.1 - - [31/Oct/2024 16:55:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:56:23 - INFO - features page is loading ...
+2024-10-31 16:56:23 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:23] "GET /features HTTP/1.1" 200 -
+2024-10-31 16:56:23 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:56:24 - INFO - about page is loading ...
+2024-10-31 16:56:24 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:24] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:56:24 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:56:25 - INFO - contact page is loading ...
+2024-10-31 16:56:25 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:25] "GET /contact HTTP/1.1" 200 -
+2024-10-31 16:56:25 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:25] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:56:26 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:26] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:56:27 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:56:28 - INFO - about page is loading ...
+2024-10-31 16:56:28 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:28] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:56:28 - INFO - 127.0.0.1 - - [31/Oct/2024 16:56:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:57:25 - INFO - 127.0.0.1 - - [31/Oct/2024 16:57:25] "GET /home HTTP/1.1" 200 -
+2024-10-31 16:57:25 - INFO - 127.0.0.1 - - [31/Oct/2024 16:57:25] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 16:57:27 - INFO - about page is loading ...
+2024-10-31 16:57:27 - INFO - 127.0.0.1 - - [31/Oct/2024 16:57:27] "GET /about HTTP/1.1" 200 -
+2024-10-31 16:57:28 - INFO - 127.0.0.1 - - [31/Oct/2024 16:57:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:10:27 - INFO - about page is loading ...
+2024-10-31 17:10:28 - INFO - 127.0.0.1 - - [31/Oct/2024 17:10:28] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:10:28 - INFO - 127.0.0.1 - - [31/Oct/2024 17:10:28] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2024-10-31 17:10:28 - INFO - 127.0.0.1 - - [31/Oct/2024 17:10:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:19:32 - INFO - about page is loading ...
+2024-10-31 17:19:32 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:32] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:19:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:33] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:19:38 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:38] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:19:38 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:38] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:19:40 - INFO - about page is loading ...
+2024-10-31 17:19:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:40] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:19:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:19:40] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:21:18 - INFO - about page is loading ...
+2024-10-31 17:21:18 - INFO - 127.0.0.1 - - [31/Oct/2024 17:21:18] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:21:18 - INFO - 127.0.0.1 - - [31/Oct/2024 17:21:18] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:22:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:22:33] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:22:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:22:33] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:22:35 - INFO - about page is loading ...
+2024-10-31 17:22:35 - INFO - 127.0.0.1 - - [31/Oct/2024 17:22:35] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:22:35 - INFO - 127.0.0.1 - - [31/Oct/2024 17:22:35] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:23:18 - INFO - about page is loading ...
+2024-10-31 17:23:18 - INFO - 127.0.0.1 - - [31/Oct/2024 17:23:18] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:23:18 - INFO - 127.0.0.1 - - [31/Oct/2024 17:23:18] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:24:08 - INFO - about page is loading ...
+2024-10-31 17:24:08 - INFO - 127.0.0.1 - - [31/Oct/2024 17:24:08] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:24:08 - INFO - 127.0.0.1 - - [31/Oct/2024 17:24:08] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:27:01 - INFO - about page is loading ...
+2024-10-31 17:27:01 - INFO - 127.0.0.1 - - [31/Oct/2024 17:27:01] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:27:01 - INFO - 127.0.0.1 - - [31/Oct/2024 17:27:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:27:05 - INFO - 127.0.0.1 - - [31/Oct/2024 17:27:05] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:27:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:27:06] "[33mGET /chat_style.css HTTP/1.1[0m" 404 -
+2024-10-31 17:27:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:27:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:32:24 - INFO - home page is loading ...
+2024-10-31 17:32:24 - INFO - 127.0.0.1 - - [31/Oct/2024 17:32:24] "GET / HTTP/1.1" 200 -
+2024-10-31 17:32:29 - INFO - home page is loading ...
+2024-10-31 17:32:29 - INFO - 127.0.0.1 - - [31/Oct/2024 17:32:29] "GET / HTTP/1.1" 200 -
+2024-10-31 17:33:07 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.214.47:5000
+2024-10-31 17:33:07 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 17:33:07 - INFO -  * Restarting with stat
+2024-10-31 17:33:08 - WARNING -  * Debugger is active!
+2024-10-31 17:33:08 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 17:33:10 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:10] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:33:10 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:10] "[33mGET /chat_style.css HTTP/1.1[0m" 404 -
+2024-10-31 17:33:10 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:10] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:33:15 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:15] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:33:15 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:15] "[33mGET /chat_style.css HTTP/1.1[0m" 404 -
+2024-10-31 17:33:15 - INFO - 127.0.0.1 - - [31/Oct/2024 17:33:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:42:33 - INFO - home page is loading ...
+2024-10-31 17:42:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:33] "GET / HTTP/1.1" 200 -
+2024-10-31 17:42:36 - INFO - api access successfull with api = SF
+2024-10-31 17:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:36] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 17:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:36] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 17:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:36] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:36] "GET /static/nav.css HTTP/1.1" 200 -
+2024-10-31 17:42:38 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:38] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:42:38 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:38] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:42:39 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:39] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:42:39 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:39] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:42:39 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:39] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:42:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:40] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:42:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:40] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:42:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:42:40] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:09] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:46:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:09] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:09] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:09] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:10 - INFO - about page is loading ...
+2024-10-31 17:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:10] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:10] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 17:46:11 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:11] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:11 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:13] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:13] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:16 - INFO - about page is loading ...
+2024-10-31 17:46:16 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:16] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:46:16 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:16] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:16 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:16] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:16 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:16] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:20] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:46:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:20] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:46:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:46:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:46:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:32 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:32] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:47:32 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:32] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:33] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:33] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:34 - INFO - about page is loading ...
+2024-10-31 17:47:34 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:34] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:47:34 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:34] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 17:47:34 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:34] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:34 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:34] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:45] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:47:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:45] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:45] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:45] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:46 - INFO - about page is loading ...
+2024-10-31 17:47:46 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:46] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:47:47 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:47] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:47 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:47] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:47 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:48 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:47:48 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:48] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:49 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:49] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:49 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:49] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:50 - INFO - about page is loading ...
+2024-10-31 17:47:50 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:50] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:47:50 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:50] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:47:50 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:50] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:47:50 - INFO - 127.0.0.1 - - [31/Oct/2024 17:47:50] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:48:06 - INFO - about page is loading ...
+2024-10-31 17:48:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:48:06] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:48:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:48:06] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:48:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:48:06] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:48:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:48:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:49:32 - INFO - about page is loading ...
+2024-10-31 17:49:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:33] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:49:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:33] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:49:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:33] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:49:33 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:33] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:49:55 - INFO - about page is loading ...
+2024-10-31 17:49:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:55] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:49:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:55] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:49:56 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:56] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:49:56 - INFO - 127.0.0.1 - - [31/Oct/2024 17:49:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:50:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:50:00] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:50:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:50:00] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:50:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:50:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:50:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:50:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:52:08 - INFO - about page is loading ...
+2024-10-31 17:52:08 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:08] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:52:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:09] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:09] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:09 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:09] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:52:11 - INFO - features page is loading ...
+2024-10-31 17:52:12 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:12] "GET /features HTTP/1.1" 200 -
+2024-10-31 17:52:12 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:12] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:52:14 - INFO - contact page is loading ...
+2024-10-31 17:52:14 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:14] "GET /contact HTTP/1.1" 200 -
+2024-10-31 17:52:14 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:14] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:52:16 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:16] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:52:17 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:17] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:17 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:17 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:52:20 - INFO - about page is loading ...
+2024-10-31 17:52:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:20] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:52:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:20] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:52:20 - INFO - 127.0.0.1 - - [31/Oct/2024 17:52:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:39 - INFO - about page is loading ...
+2024-10-31 17:56:39 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:39] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:56:39 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:39] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:40] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:40 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:40] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:43 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:43] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:56:43 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:43] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:43 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:43] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:43 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:43] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:44 - INFO - about page is loading ...
+2024-10-31 17:56:44 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:44] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:56:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:45] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:45] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:45 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:45] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:52 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:52] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:56:52 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:52 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:52 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:53 - INFO - about page is loading ...
+2024-10-31 17:56:53 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:53] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:56:53 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:53] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:54 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:54] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:54 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:55] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:56:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:55] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:55 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:57 - INFO - about page is loading ...
+2024-10-31 17:56:57 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:57] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:56:58 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:58] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:56:58 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:58] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:56:58 - INFO - 127.0.0.1 - - [31/Oct/2024 17:56:58] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:57:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:00] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:57:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:00] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:57:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:57:00 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:57:06 - INFO - about page is loading ...
+2024-10-31 17:57:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:06] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:57:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:06] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:57:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:57:06 - INFO - 127.0.0.1 - - [31/Oct/2024 17:57:06] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 17:59:22 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:22] "GET /home HTTP/1.1" 200 -
+2024-10-31 17:59:23 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:23] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 17:59:23 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:23] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:59:23 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:59:25 - INFO - about page is loading ...
+2024-10-31 17:59:25 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:25] "GET /about HTTP/1.1" 200 -
+2024-10-31 17:59:25 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:25] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 17:59:25 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:25] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 17:59:25 - INFO - 127.0.0.1 - - [31/Oct/2024 17:59:25] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 18:00:29 - INFO - about page is loading ...
+2024-10-31 18:00:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:29] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:00:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:29] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:30] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:30] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:00:33 - INFO - about page is loading ...
+2024-10-31 18:00:33 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:33] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:00:33 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:33] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:33 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:33] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:34 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:34] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:00:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:51] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:00:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:51] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:51] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:51] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:00:55 - INFO - about page is loading ...
+2024-10-31 18:00:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:55] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:00:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:00:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:00:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:00:55] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:01:06 - INFO - features page is loading ...
+2024-10-31 18:01:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:01:06] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:01:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:01:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:10:19 - INFO - about page is loading ...
+2024-10-31 18:10:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:19] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:10:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:19] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:10:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:20] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 18:10:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:10:22 - INFO - about page is loading ...
+2024-10-31 18:10:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:22] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:10:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:22] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:10:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:22] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:10:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:22] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:10:24 - INFO - features page is loading ...
+2024-10-31 18:10:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:24] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:10:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:10:25 - INFO - 127.0.0.1 - - [31/Oct/2024 18:10:25] "[33mGET /styles.css HTTP/1.1[0m" 404 -
+2024-10-31 18:11:47 - INFO - features page is loading ...
+2024-10-31 18:11:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:11:47] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:11:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:11:47] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:11:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:11:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:11:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:11:47] "GET /static/features.css HTTP/1.1" 200 -
+2024-10-31 18:14:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:01] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:14:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:01] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:14:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:01] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:14:02 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:02] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:14:03 - INFO - features page is loading ...
+2024-10-31 18:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:03] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:03] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:03] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:03] "GET /static/features.css HTTP/1.1" 200 -
+2024-10-31 18:14:59 - INFO - 127.0.0.1 - - [31/Oct/2024 18:14:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-31 18:15:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:21] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:15:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:22] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:22] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:22] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:15:24 - INFO - about page is loading ...
+2024-10-31 18:15:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:24] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:15:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:24] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:24] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:15:28 - INFO - features page is loading ...
+2024-10-31 18:15:28 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:28] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:15:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:29] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:29] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:15:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:29] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:30] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:15:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:30] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:31 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:31] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:31 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:31] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:15:32 - INFO - features page is loading ...
+2024-10-31 18:15:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:32] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:15:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:32] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:32] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:32] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:15:36 - INFO - about page is loading ...
+2024-10-31 18:15:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:36] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:15:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:36] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:37] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:15:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:15:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:20:52 - INFO - features page is loading ...
+2024-10-31 18:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:52] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:52] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:20:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:56] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:20:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:56] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:20:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:20:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:20:56] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:01 - INFO - features page is loading ...
+2024-10-31 18:21:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:01] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:21:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:01] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:01] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:21:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:05] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:21:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:05] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:05] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:21:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:05] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:08 - INFO - features page is loading ...
+2024-10-31 18:21:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:08] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:21:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:08] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:08] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:08] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:21:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:11] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:21:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:11] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:11] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:21:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:21:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:41] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:23:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:41] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:23:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:41] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:41] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:46 - INFO - about page is loading ...
+2024-10-31 18:23:46 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:46] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:23:46 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:46] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:46 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:46] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:23:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:48] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:48] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:48 - INFO - features page is loading ...
+2024-10-31 18:23:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:48] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:23:49 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:49] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:49 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:49] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:49 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:49] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:54] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:23:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:54] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:23:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:23:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:23:54] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:00 - INFO - Calling api ...
+2024-10-31 18:24:00 - INFO - TextGenerator successfull with aip = SF and model = None ..
+2024-10-31 18:24:02 - INFO - Client created sucessfully...
+2024-10-31 18:24:02 - INFO - create_client successfull ..
+2024-10-31 18:24:03 - INFO - HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2024-10-31 18:24:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:03] "POST /query HTTP/1.1" 200 -
+2024-10-31 18:24:04 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:04] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:04 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:04] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:04 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:04] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:24:13 - INFO - about page is loading ...
+2024-10-31 18:24:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:13] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:24:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:13] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:24:14 - INFO - features page is loading ...
+2024-10-31 18:24:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:14] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:24:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:14] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:14] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:24:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:14] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:19 - INFO - contact page is loading ...
+2024-10-31 18:24:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:19] "GET /contact HTTP/1.1" 200 -
+2024-10-31 18:24:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:19] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:24:21 - INFO - features page is loading ...
+2024-10-31 18:24:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:21] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:24:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:21] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:21] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:24:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:24:21] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:26:05 - INFO - features page is loading ...
+2024-10-31 18:26:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:05] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:26:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:05] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:26:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:06] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:26:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:26:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:07] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:26:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:07] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:26:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:07] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:26:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:26:07] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:28:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:28:48] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:28:48] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:28:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:28:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:28:59 - INFO - 127.0.0.1 - - [31/Oct/2024 18:28:59] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:29:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:00] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:29:01 - INFO - about page is loading ...
+2024-10-31 18:29:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:01] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:29:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:01] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:29:01 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:01] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:03 - INFO - features page is loading ...
+2024-10-31 18:29:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:03] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:29:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:03] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:03] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:03] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:29:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:06] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:29:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:06] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:29:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:29:06 - INFO - 127.0.0.1 - - [31/Oct/2024 18:29:06] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:30:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:30:36] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:30:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:30:36] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:30:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:30:36] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:30:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:30:36] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:34:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:23] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:34:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:23] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:34:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:23] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:34:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:34:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:27] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:34:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:27] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:34:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:27] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:34:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:34:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:35:45 - INFO - home page is loading ...
+2024-10-31 18:35:45 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:45] "GET / HTTP/1.1" 200 -
+2024-10-31 18:35:48 - INFO - api access successfull with api = k
+2024-10-31 18:35:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:48] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 18:35:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:48] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:35:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:35:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:48] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:35:52 - INFO - about page is loading ...
+2024-10-31 18:35:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:52] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:35:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:35:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:52] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:35:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:35:53 - INFO - features page is loading ...
+2024-10-31 18:35:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:53] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:35:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:54] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:35:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:35:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:35:54] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:11] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:36:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:11] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:11] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:14 - INFO - features page is loading ...
+2024-10-31 18:36:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:14] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:36:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:15] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:15] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:20] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:36:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:20] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:23 - INFO - features page is loading ...
+2024-10-31 18:36:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:23] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:36:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:23] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:23] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:27] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:36:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:27] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:27] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:30 - INFO - features page is loading ...
+2024-10-31 18:36:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:30] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:36:31 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:31] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:31 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:31] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:31 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:31] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:37] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:36:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:37] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:37] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:40 - INFO - features page is loading ...
+2024-10-31 18:36:40 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:40] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:36:40 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:40] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:40 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:40] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:40 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:40] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:50 - INFO - contact page is loading ...
+2024-10-31 18:36:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:50] "GET /contact HTTP/1.1" 200 -
+2024-10-31 18:36:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:50] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:53] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:36:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:53] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:53] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:55 - INFO - about page is loading ...
+2024-10-31 18:36:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:55] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:36:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:36:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:55] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:57 - INFO - features page is loading ...
+2024-10-31 18:36:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:57] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:36:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:57] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:57] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:36:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:36:57] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:03] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:37:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:03] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:03] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:03 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:03] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:04 - INFO - features page is loading ...
+2024-10-31 18:37:04 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:04] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:37:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:05] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:05] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:05 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:05] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:11] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:37:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:11] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:11] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:13 - INFO - features page is loading ...
+2024-10-31 18:37:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:13] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:37:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:13] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:17] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:37:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:17] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:23 - INFO - features page is loading ...
+2024-10-31 18:37:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:23] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:37:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:23] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:37:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:37:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:37:23] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:22 - INFO - about page is loading ...
+2024-10-31 18:38:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:22] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:38:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:22] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:23] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:23] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:38:25 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:25] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:38:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:26] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:26] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:38:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:26] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:27 - INFO - features page is loading ...
+2024-10-31 18:38:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:27] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:38:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:27] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:27] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:27] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:38:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:47] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:38:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:47] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:38:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:47] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:38:47 - INFO - 127.0.0.1 - - [31/Oct/2024 18:38:47] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:38 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 18:39:38 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 18:39:47 - INFO - home page is loading ...
+2024-10-31 18:39:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:48] "GET / HTTP/1.1" 200 -
+2024-10-31 18:39:51 - INFO - api access successfull with api = sdf
+2024-10-31 18:39:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:51] "POST /api-access HTTP/1.1" 200 -
+2024-10-31 18:39:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:39:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:55 - INFO - about page is loading ...
+2024-10-31 18:39:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:55] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:39:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:56] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:56] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:39:57 - INFO - features page is loading ...
+2024-10-31 18:39:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:57] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:39:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:57] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:57] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:39:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:57] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:39:59 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:59] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:39:59 - INFO - 127.0.0.1 - - [31/Oct/2024 18:39:59] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:40:50 - INFO - features page is loading ...
+2024-10-31 18:40:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:50] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:40:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:50] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:50] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:40:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:50] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:56] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:40:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:56] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:56] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:40:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:40:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:42:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:32] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:42:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:32] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:32] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:32 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:32] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:42:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:35] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:42:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:35] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:35] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:36] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:36] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:36] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:42:36 - INFO - 127.0.0.1 - - [31/Oct/2024 18:42:36] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:45:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:26] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:45:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:26] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:45:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:26] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:45:26 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:26] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:45:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:54] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:45:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:55] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:45:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:45:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:45:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:10] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:10] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:10] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:10] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:13] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:13] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:46:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:21] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:46:21 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:21] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:46:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:22] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:22 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:22] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:24] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:24] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:24] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:46:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:37] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:46:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:37] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:46:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:37] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:46:37 - INFO - 127.0.0.1 - - [31/Oct/2024 18:46:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:48:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:48:00] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:48:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:48:00] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:48:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:48:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:48:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:48:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:41] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:49:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:41] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:42] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:42] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:43 - INFO - about page is loading ...
+2024-10-31 18:49:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:43] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:49:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:43] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:43] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 18:49:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:43] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:49:48 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:48] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:49 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:49] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:49 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:49] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:50 - INFO - about page is loading ...
+2024-10-31 18:49:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:50] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:49:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:50] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:50] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:50 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:50] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:51 - INFO - features page is loading ...
+2024-10-31 18:49:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:51] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:49:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:52] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:53] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:53] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:53] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:53 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:49:55 - INFO - about page is loading ...
+2024-10-31 18:49:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:55] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:49:55 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:56] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:49:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:49:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:50:51 - INFO - about page is loading ...
+2024-10-31 18:50:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:51] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:50:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:51] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:50:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:52] "GET /static/about.css HTTP/1.1" 200 -
+2024-10-31 18:50:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:50:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:56] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:50:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:56] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:50:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:56] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:50:56 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:56] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:50:57 - INFO - about page is loading ...
+2024-10-31 18:50:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:57] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:50:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:57] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:50:58 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:58] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:50:58 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:58] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:50:59 - INFO - 127.0.0.1 - - [31/Oct/2024 18:50:59] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:51:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:00] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:00 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:07 - INFO - features page is loading ...
+2024-10-31 18:51:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:07] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:51:07 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:07] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:08] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:08 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:08] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:10] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:51:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:10] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:10] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:10 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:10] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:11] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:51:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:11] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:12 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:12] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:12 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:12] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:14 - INFO - about page is loading ...
+2024-10-31 18:51:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:14] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:51:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:14] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:14] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:14] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:23] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:51:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:23] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:23 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:23] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:24 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:24] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:35 - INFO - about page is loading ...
+2024-10-31 18:51:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:35] "GET /about HTTP/1.1" 200 -
+2024-10-31 18:51:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:35] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:35] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:51:35 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:35] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:38 - INFO - features page is loading ...
+2024-10-31 18:51:38 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:38] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:51:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:39] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:39] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:51:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:51:39] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:52:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:39] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:52:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:39] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:52:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:39] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:52:39 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:39] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:52:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:41] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:52:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:42] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:52:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:42] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:52:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:52:42] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:52:59 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.214.47:5000
+2024-10-31 18:52:59 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 18:52:59 - INFO -  * Restarting with stat
+2024-10-31 18:53:02 - WARNING -  * Debugger is active!
+2024-10-31 18:53:02 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 18:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:02] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:02] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:02] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:02 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:02] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:13 - INFO - features page is loading ...
+2024-10-31 18:53:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:13] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:53:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:13 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:13] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:14] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:53:16 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:16] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:53:16 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:16] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:16 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:16] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:53:16 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:16] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:17 - INFO - features page is loading ...
+2024-10-31 18:53:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:17] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:53:17 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:18 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:18] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:18 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:18] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:53:40 - INFO - features page is loading ...
+2024-10-31 18:53:40 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:40] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:53:41 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:41] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:42] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:42] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:53:51 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:51] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:53:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:53:52 - INFO - 127.0.0.1 - - [31/Oct/2024 18:53:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:54:11 - INFO - features page is loading ...
+2024-10-31 18:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:11] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:11] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:11] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:11 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:11] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:54:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:27] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:54:27 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:27] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:28 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:54:28 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:28] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:43 - INFO - features page is loading ...
+2024-10-31 18:54:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:43] "GET /features HTTP/1.1" 200 -
+2024-10-31 18:54:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:43] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:43] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:43 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:43] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:54:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:54] "GET /home HTTP/1.1" 200 -
+2024-10-31 18:54:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:54] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:54:54 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:54] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:57 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:54:57 - INFO - task page is loading ...
+2024-10-31 18:54:57 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:57] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:54:58 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:58] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:58 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:58] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:54:58 - INFO - 127.0.0.1 - - [31/Oct/2024 18:54:58] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:56:30 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:56:30 - INFO - task page is loading ...
+2024-10-31 18:56:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:56:30] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:56:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:56:30] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:56:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:56:30] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:56:30 - INFO - 127.0.0.1 - - [31/Oct/2024 18:56:30] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:57:19 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:57:19 - INFO - task page is loading ...
+2024-10-31 18:57:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:19] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:57:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:19] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:57:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:19] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:57:19 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:19] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:57:42 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:57:42 - INFO - task page is loading ...
+2024-10-31 18:57:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:42] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:57:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:42] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:57:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:42] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:57:42 - INFO - 127.0.0.1 - - [31/Oct/2024 18:57:42] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:58:14 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:58:14 - INFO - task page is loading ...
+2024-10-31 18:58:14 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:14] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:58:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:15] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:58:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:15] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:58:15 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:58:28 - INFO - Task generation successfull selected task is = 
+2024-10-31 18:58:28 - INFO - task page is loading ...
+2024-10-31 18:58:28 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:28] "POST /task HTTP/1.1" 200 -
+2024-10-31 18:58:28 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:28] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 18:58:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:29] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:58:29 - INFO - 127.0.0.1 - - [31/Oct/2024 18:58:29] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 18:59:20 - INFO - Calling api ...
+2024-10-31 18:59:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:59:20] "POST /query HTTP/1.1" 200 -
+2024-10-31 18:59:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:59:20] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 18:59:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:59:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 18:59:20 - INFO - 127.0.0.1 - - [31/Oct/2024 18:59:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:03:00 - INFO - Calling api ...
+2024-10-31 19:03:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:00] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:03:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:00] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:03:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:03:01 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:01] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:03:58 - INFO - Calling api ...
+2024-10-31 19:03:58 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:58] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:03:58 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:58] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:03:58 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:58] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:03:58 - INFO - 127.0.0.1 - - [31/Oct/2024 19:03:58] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:06:05 - INFO - Calling api ...
+2024-10-31 19:06:05 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:05] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:06:05 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:05] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:06:05 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:05] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:06:05 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:05] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:06:20 - INFO - Calling api ...
+2024-10-31 19:06:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:20] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:06:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:20] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:06:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:06:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:06:20] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:07:05 - INFO - Calling api ...
+2024-10-31 19:07:05 - INFO - 127.0.0.1 - - [31/Oct/2024 19:07:05] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:07:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:07:06] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:07:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:07:06] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:07:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:07:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:09:03 - INFO - Calling api ...
+2024-10-31 19:09:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:03] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:09:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:03] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:09:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:03] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:09:04 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:04] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:09:17 - INFO - Calling api ...
+2024-10-31 19:09:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:17] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:09:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:17] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:09:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:09:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:09:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:13:31 - INFO - Calling api ...
+2024-10-31 19:13:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:31] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:13:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:31] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:13:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:31] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:31] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:13:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:53] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:13:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:53] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:53] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:13:55 - INFO - features page is loading ...
+2024-10-31 19:13:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:55] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:13:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:55] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:13:59 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:59] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:13:59 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:59] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:13:59 - INFO - 127.0.0.1 - - [31/Oct/2024 19:13:59] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:14:02 - INFO - features page is loading ...
+2024-10-31 19:14:02 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:02] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:03] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:03] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:14:03 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:03] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:06] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:14:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:06] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:06] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:06 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:06] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:14:52 - INFO - features page is loading ...
+2024-10-31 19:14:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:52] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:14:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:52] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:14:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:52] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:55] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:14:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:55] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:14:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:14:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:18:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:37] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:18:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:37] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:18:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:37] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:18:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:18:41 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:41] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:18:41 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:41] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:18:42 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:42] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:18:42 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:42] "GET /static/nav.css HTTP/1.1" 200 -
+2024-10-31 19:18:42 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:42] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:18:42 - INFO - 127.0.0.1 - - [31/Oct/2024 19:18:42] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:19:28 - INFO - 127.0.0.1 - - [31/Oct/2024 19:19:28] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:19:28 - INFO - 127.0.0.1 - - [31/Oct/2024 19:19:28] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:19:29 - INFO - 127.0.0.1 - - [31/Oct/2024 19:19:29] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:19:29 - INFO - 127.0.0.1 - - [31/Oct/2024 19:19:29] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:20:48 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:48] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:20:48 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:48] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:20:48 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:48] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:20:48 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:48] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:20:51 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:51] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:20:51 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:51] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:20:51 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:51] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:20:51 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:51] "GET /static/nav.css HTTP/1.1" 200 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:20:52 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:52] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:20:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:53] "GET /static/nav.css HTTP/1.1" 200 -
+2024-10-31 19:20:53 - INFO - 127.0.0.1 - - [31/Oct/2024 19:20:53] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:21:04 - INFO - features page is loading ...
+2024-10-31 19:21:04 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:04] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:21:04 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:04] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:04 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:04] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:04 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:04] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:21:32 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 19:21:32 - INFO -  * Restarting with stat
+2024-10-31 19:21:34 - WARNING -  * Debugger is active!
+2024-10-31 19:21:34 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 19:21:36 - INFO - features page is loading ...
+2024-10-31 19:21:36 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:36] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:21:36 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:36] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:36 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:36] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:21:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:37] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:21:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:37] "GET /static/chat.css HTTP/1.1" 200 -
+2024-10-31 19:21:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:37] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:37 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:37] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:21:39 - INFO - features page is loading ...
+2024-10-31 19:21:39 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:39] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:21:39 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:39] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:39 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:39] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:21:39 - INFO - 127.0.0.1 - - [31/Oct/2024 19:21:39] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:21:56 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 19:21:56 - INFO -  * Restarting with stat
+2024-10-31 19:21:58 - WARNING -  * Debugger is active!
+2024-10-31 19:21:58 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 19:22:48 - INFO -  * Detected change in 'E:\\Projects\\NVIDIA_FLASK_APP\\app.py', reloading
+2024-10-31 19:22:48 - INFO -  * Restarting with stat
+2024-10-31 19:22:49 - WARNING -  * Debugger is active!
+2024-10-31 19:22:49 - INFO -  * Debugger PIN: 979-032-304
+2024-10-31 19:22:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:55] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:22:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:55] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:22:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:55] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:22:55 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:55] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:22:59 - INFO - features page is loading ...
+2024-10-31 19:22:59 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:59] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:22:59 - INFO - 127.0.0.1 - - [31/Oct/2024 19:22:59] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:23:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:00] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:13] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:23:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:13] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:13] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:23:26 - INFO - features page is loading ...
+2024-10-31 19:23:26 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:26] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:23:26 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:26] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:26 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:26] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:23:26 - INFO - 127.0.0.1 - - [31/Oct/2024 19:23:26] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:31:54 - INFO - 127.0.0.1 - - [31/Oct/2024 19:31:54] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:31:54 - INFO - 127.0.0.1 - - [31/Oct/2024 19:31:54] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:31:54 - INFO - 127.0.0.1 - - [31/Oct/2024 19:31:54] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:31:54 - INFO - 127.0.0.1 - - [31/Oct/2024 19:31:54] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:00 - INFO - Calling api ...
+2024-10-31 19:32:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:00] "POST /query HTTP/1.1" 200 -
+2024-10-31 19:32:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:00] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:00] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:00 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:00] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:13 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:13 - INFO - task page is loading ...
+2024-10-31 19:32:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:13] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:13] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:13] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:13 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:13 - INFO - task page is loading ...
+2024-10-31 19:32:13 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:13] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:14 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:14] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:14 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:14] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:14 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:14] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:14 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:14 - INFO - task page is loading ...
+2024-10-31 19:32:14 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:14] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:15 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:15 - INFO - task page is loading ...
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:15 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:15] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:16 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:16 - INFO - task page is loading ...
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:16 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:16 - INFO - task page is loading ...
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:16 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:16] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:17 - INFO - Task generation successfull selected task is = 
+2024-10-31 19:32:17 - INFO - task page is loading ...
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "POST /task HTTP/1.1" 200 -
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:17 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:17] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:20 - INFO - features page is loading ...
+2024-10-31 19:32:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:20] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:32:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:20] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:20 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:20] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:21 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:21] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:21 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:21] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:32:22 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:22] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:22 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:22] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:22 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:22] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:27 - INFO - features page is loading ...
+2024-10-31 19:32:27 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:27] "GET /features HTTP/1.1" 200 -
+2024-10-31 19:32:27 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:27] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:28 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:28] "[36mGET /static/features.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:28 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:28] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:30 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:30] "GET /home HTTP/1.1" 200 -
+2024-10-31 19:32:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:31] "[36mGET /static/chat.css HTTP/1.1[0m" 304 -
+2024-10-31 19:32:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:31] "[33mGET /static/images/profile-pic.png HTTP/1.1[0m" 404 -
+2024-10-31 19:32:31 - INFO - 127.0.0.1 - - [31/Oct/2024 19:32:31] "[36mGET /static/nav.css HTTP/1.1[0m" 304 -

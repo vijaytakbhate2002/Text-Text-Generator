@@ -21,20 +21,14 @@ API_KEY = None
 TASK = None
 PROMPT = ""
 
-@app.route('/about')
-def about():
-    logging.info("about page is loading ...")
-    return render_template('about.html')
+@app.route('/home')
+def home():
+    return render_template('navbar_templates/chat.html')
 
 @app.route('/features')
 def features():
     logging.info("features page is loading ...")
-    return render_template('features.html')
-
-@app.route('/contact')
-def contact():
-    logging.info("contact page is loading ...")
-    return render_template('contact.html')
+    return render_template('navbar_templates/features.html')
 
 @app.route("/task", methods=['POST'])
 def user_option():
@@ -43,14 +37,14 @@ def user_option():
     logging.info(f"Task generation successfull selected task is = {TASK}")
     PROMPT = data[TASK] if TASK in data and TASK is not None else ''
     logging.info("task page is loading ...")
-    return render_template("chat.html")
+    return render_template("navbar_templates/chat.html")
 
 @app.route("/api-access", methods=['POST'])
 def api_access():
     global MODEL, API_KEY  
     API_KEY = request.form.get("api_key")
     logging.info(f"api access successfull with api = {API_KEY}")
-    return render_template("chat.html")
+    return home()
 
 @app.route("/query", methods=['POST'])
 def text_processor():
@@ -67,7 +61,7 @@ def text_processor():
         logging.info("Response Generated successfully..")
         return render_template("chat.html", response=response)
     except Exception as e:
-        return render_template("chat.html", response="Transformer is not working, or you may have reached the API usage limit.")
+        return render_template("navbar_templates/chat.html", response="Transformer is not working, or you may have reached the API usage limit.")
 
 @app.route("/")
 def home_page():

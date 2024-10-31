@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} ChatGPT Clone {% endblock title%}</title>
+</head>
+    {% block style %}
+    
+    {% endblock style %}
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Profile picture -->
+            <img src="static/images/profile-pic.png" alt="Profile Picture" class="navbar-profile-pic">
+
+            <!-- Title -->
+            <h1 class="navbar-title">Chatbot Project</h1>
+
+            <!-- Links -->
+            <ul class="navbar-links">
+                <li><a href="{{ url_for('features') }}">User Guide</a></li>
+                <li><a href="{{ url_for('home') }}">Use Bot</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+  {% block content %}
+  {% endblock content%}
+</body>
+
+</html>
+    

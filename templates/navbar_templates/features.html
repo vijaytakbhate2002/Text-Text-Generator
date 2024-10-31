@@ -1,0 +1,91 @@
+{% extends "navbar_templates/base.html" %}
+
+{% block title %}
+How to Use - Text-Text Generator Chatbot
+{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Text-Text Generator Chatbot</title>
+    {% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
+    {% endblock style %}
+</head>
+
+<body>
+    <header>
+        <h1>How to Use the Text-Text Generator Chatbot</h1>
+        <p>Your all-in-one solution for paraphrasing, grammar checking, AI detection, and more!</p>
+    </header>
+
+    <main>
+        <!-- Project Overview Section -->
+        <section class="overview-section">
+            <h2>Project Overview</h2>
+            <p>This Flask-based chatbot application allows users to perform various text-generation and
+                text-manipulation tasks with ease. Simply enter your text, select a task, and let the application do the
+                rest!</p>
+        </section>
+
+        <!-- Demo Video Section -->
+        <section class="demo-video">
+            <h2>Demo Video</h2>
+            <video controls>
+                <source src="https://github.com/user-attachments/assets/514dac38-7a68-48cc-a826-d0fa895a8553"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Step-by-Step Instructions Section -->
+        <section class="instructions-section">
+            <h2>How to Access the Application</h2>
+            <ol>
+                <li>🌐 Visit <a href="https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct"
+                        target="_blank">NVIDIA’s website</a>.</li>
+                <li>🔑 Create an NVIDIA account and generate an API Key for any text-to-text language model.</li>
+                <li>🔗 Paste the API Key in the "Access Key" page, then proceed to the chatbot page.</li>
+                <li>💬 Start using the text generation tools!</li>
+            </ol>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Paraphrasing:</strong> Reword text to enhance clarity and originality.</li>
+                <li><strong>Grammar Checking:</strong> Detect and correct grammar and spelling errors.</li>
+                <li><strong>AI Detection:</strong> Identify if text is AI-generated or human-written.</li>
+                <li><strong>Plagiarism Checking:</strong> Ensure originality by scanning for copied content.</li>
+                <li><strong>Summarization:</strong> Condense lengthy text into a concise summary.</li>
+                <li><strong>Short Answer Generation:</strong> Generate brief answers for quick information retrieval.
+                </li>
+                <li><strong>Basic Chat:</strong> Interact with a chatbot for general queries.</li>
+            </ul>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <h2>Application Benefits</h2>
+            <ul>
+                <li>⏳ Save time on basic text tasks.</li>
+                <li>📝 Text Generation & Manipulation with ease.</li>
+                <li>🎯 User-Friendly Interface for quick and intuitive navigation.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Text-Text Generator Chatbot. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+{% endblock content %}
