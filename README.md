@@ -2,6 +2,8 @@
 
 Welcome to **Text-Text Generator Chatbot**, an all-in-one application for handling various text-processing tasks like paraphrasing, grammar checking, AI detection, and more! This project combines the capabilities of tools like Grammarly and ChatGPT to streamline text-related tasks.
 
+![Screenshot (238)](https://github.com/user-attachments/assets/37bfacfe-98f8-48aa-8212-329d468eda74)
+
 ## Project Overview
 This Flask-based chatbot application allows users to perform various text-generation and text-manipulation tasks with ease. Simply enter your text, select a task, and let the application do the rest!
 
