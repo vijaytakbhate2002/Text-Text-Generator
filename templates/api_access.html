@@ -65,10 +65,14 @@
 
 <div class="login-container">
     <h2>API Access</h2>
-    <form action="/api-access" method="POST">
+    <form action="/model_info" method="POST">
+        <div class="input-group">
+            <label for="model_name">Enter Model Name</label>
+            <input type="text" id="model_name" name="model_name" placeholder="Enter nodel name here ..." required>
+        </div>
         <div class="input-group">
             <label for="api_key">Enter your NVIDIA API Key</label>
-            <input type="password" id="api_key" name="api_key" placeholder="Enter API key" required>
+            <input type="password" id="api_key" name="api_key" placeholder="Enter API key ..." required>
         </div>
         <button type="submit">Access API</button>
     </form>

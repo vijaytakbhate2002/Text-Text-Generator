@@ -47,7 +47,7 @@ class GeneratorAbstract(ABC):
 
 class TextGenerator(GeneratorAbstract):
 
-    def __init__(self, api: str, model: str = "microsoft/phi-3.5-mini-instruct"):
+    def __init__(self, api: str, model: str = "qwen/qwen2-7b-instruct"):
         super().__init__(api, model)
         self.outputList = []
         self.outputText = ""
@@ -98,7 +98,6 @@ class TextGenerator(GeneratorAbstract):
             self.parse_chunks()  
             output = TextProcessor.clean_text(self.outputText)
             logging.info("Output generated successfully...")
-            print(output)
             return output
         except Exception as e:
             logging.error(f"Text cleaning failed for output_text '{self.outputText}': {str(e)}")

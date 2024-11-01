@@ -4,21 +4,12 @@
 How to Use - Text-Text Generator Chatbot
 {% endblock title %}
 
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Use - Text-Text Generator Chatbot</title>
-    {% block style %}
+{% block style %}
     <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
-    {% endblock style %}
-</head>
+{% endblock style %}
 
-<body>
+{% block content %}
     <header>
         <h1>How to Use the Text-Text Generator Chatbot</h1>
         <p>Your all-in-one solution for paraphrasing, grammar checking, AI detection, and more!</p>
@@ -85,7 +76,4 @@ How to Use - Text-Text Generator Chatbot
     <footer>
         <p>&copy; 2024 Text-Text Generator Chatbot. All rights reserved.</p>
     </footer>
-</body>
-
-</html>
 {% endblock content %}
