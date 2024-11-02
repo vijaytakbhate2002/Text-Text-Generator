@@ -1,22 +1,19 @@
-/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Add padding to the body to account for the navbar height */
+
 body {
-    padding-top: 80px; 
+    padding-top: 30px; 
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden;/* Adjust this value based on your navbar height */
+    overflow-x: hidden;
 }
 
-/* Alternatively, if you're using a wrapper for your main content */
 .main-content {
-    margin-top: 80px; /* Same adjustment to ensure space below the navbar */
+    margin-top: 80px; 
 }
 
-/* Navbar Styling */
 .navbar {
     position: fixed;
     top: 0;
@@ -37,7 +34,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Profile picture */
 .navbar-profile-pic {
     height: 50px;
     width: 50px;
@@ -51,7 +47,6 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Navbar Title */
 .navbar-title {
     font-size: 26px;
     font-weight: bold;
@@ -60,7 +55,6 @@ body {
     animation: fadeIn 1s ease;
 }
 
-/* Navbar Links */
 .navbar-links {
     list-style-type: none;
     display: flex;
@@ -88,7 +82,6 @@ body {
     text-shadow: 0 0 8px rgba(255, 218, 121, 0.7);
 }
 
-/* Mobile Navigation */
 .navbar-menu-icon {
     display: none;
     font-size: 30px;
@@ -126,7 +119,6 @@ body {
     }
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

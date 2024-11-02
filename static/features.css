@@ -48,9 +48,23 @@ section:hover {
     transform: translateY(-5px);
 }
 
+/* Access Row Styling */
+.access-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.access-row .demo-video,
+.access-row .instructions-section {
+    flex: 1;
+    min-width: 0;
+}
+
 /* Demo Video Styling */
 .demo-video video {
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -89,6 +103,13 @@ footer {
 .contact-details {
     list-style-type: none;
     padding: 0;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .access-row {
+        flex-direction: column;
+    }
 }
 
 /* Animations */

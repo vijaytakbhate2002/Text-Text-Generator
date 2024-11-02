@@ -43,11 +43,14 @@ chat-bot
 
         <div class="input-container">
             <form action="/query" method="POST">
-                <input type="text" name="user_input" placeholder= {{task}} required>
-                <button type="submit">Send</button>
+                <input type="text" name="user_input" placeholder={{task}} required>
+                <button type="submit"><span class="send-button-icon">➤</span></button>
             </form>
         </div>
     </div>
 </div>
+
+
+
 
 {% endblock content %}
