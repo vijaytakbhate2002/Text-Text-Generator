@@ -1,0 +1,194 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #d9e6f2);
+    margin: 0;
+}
+
+/* Main container styling */
+.login-container {
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Heading styling */
+h2 {
+    margin-bottom: 20px;
+    color: #00796b;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd9e0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #00796b;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff3333;
+    font-size: 14px;
+    display: none;
+    margin-top: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;/* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2a2d3e, #1e2130);
+            margin: 0;
+            color: #e0e6ed;
+        }
+        
+        /* Main container styling */
+        .login-container {
+            width: 400px;
+            padding: 30px;
+            background-color: #30334e;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        /* Heading styling */
+        h2 {
+            margin-bottom: 20px;
+            color: #ffda79;
+            font-size: 24px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Input group styling */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            color: #ffda79;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #2a2d3e;
+            border: 1px solid #3c3f5a;
+            border-radius: 5px;
+            outline: none;
+            color: #e0e6ed;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #ffda79;
+            box-shadow: 0 0 8px rgba(255, 218, 121, 0.5);
+        }
+        
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3c3f5a;
+            color: #ffda79;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        button:hover {
+            background-color: #ffda79;
+            color: #3c3f5a;
+            transform: translateY(-2px);
+        }
+        
+        /* Error message styling */
+        .error-message {
+            color: #ff7373;
+            font-size: 14px;
+            display: none;
+            margin-top: 10px;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

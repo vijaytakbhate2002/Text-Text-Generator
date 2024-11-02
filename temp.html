@@ -1,36 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Grammar-Bot {% endblock title%}</title>
-</head>
-    {% block style %}
-    
-    {% endblock style %}
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <!-- Profile picture -->
-            <img src="static/images/logo.jpeg" alt="Profile Picture" class="navbar-profile-pic">
+body {
+    font-family: Arial, sans-serif;
+}
 
-            <!-- Title -->
-            <h1 class="navbar-title">ChatBot</h1>
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(20, 20, 50, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
 
-            <!-- Links -->
-            <ul class="navbar-links">
-                <li><a href="{{ url_for('user_guide') }}">User Guide</a></li>
-                <li><a href="{{ url_for('api_access') }}">Use Bot</a></li>
-            </ul>
-            
-        </div>
-    </nav>
+.navbar.scrolled {
+    background-color: rgba(20, 20, 50, 0.95);
+}
 
-  {% block content %}
-  {% endblock content%}
-</body>
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
 
-</html>
-    
+.navbar-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.navbar-title {
+    font-size: 24px;
+    color: #ffda79;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Links Styling */
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #ffda79;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    animation: bounce 0.8s ease forwards;
+}
+
+.navbar-links li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Hover Effect for Links */
+.navbar-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffda79;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.navbar-links li a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Navigation */
+.navbar-menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #ffda79;
+    cursor: pointer;
+    animation: fadeIn 1.2s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgba(20, 20, 50, 0.95);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        padding-left: 20px;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .navbar-links.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-menu-icon {
+        display: block;
+    }
+
+    .navbar-profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+/* Add this to the end of your existing nav.css file */
+
+/* Body Styling */
+body {
+    padding-top: 75px; /* Adjust this value according to your navbar height */
+}
+
+/* Main Container Adjustments */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 75px); /* Subtract the navbar height */
+}
+
+/* Optional: Adjust Sidebar and Chat Container Height */
+.sidebar {
+    /* Adjust heights or styles as needed */
+    flex: 0 0 250px; /* Example width for sidebar */
+}
+
+.chat-container {
+    flex: 1; /* Take remaining space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Ensure other elements adjust accordingly */
+.input-container {
+    margin-top: 20px; /* Add spacing between input and chat box */
+}
