@@ -1,1 +1,1 @@
-{"API": "d", "MODEL": "d", "PROMPT": "Rewrite the following text to preserve its meaning while using different words and sentence structures: ", "TASK": "Paraphraser"}
+{"API": "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", "MODEL": "qwen/qwen2-7b-instruct", "PROMPT": "", "TASK": ""}

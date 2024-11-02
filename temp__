@@ -1,3 +1,6 @@
+* {
+    font-family: Arial, sans-serif; /* or any font of your choice */
+}
 
 .navbar {
     width: 100%;

@@ -17,13 +17,13 @@ with open("data.json", 'r') as file:
 with open("UI_data.json", 'r') as UI_file:
     UI_data = json.loads(UI_file.read())
 
-UI_data['PROMPT'] = UI_data['TASK'] = data['API'] = data['MODEL'] = None
+UI_data['PROMPT'] = UI_data['TASK'] = data['API'] = data['MODEL'] = ""
 
 app = Flask(__name__)
 
 @app.route('/bot')
 def bot():
-    return render_template('navbar_templates/chat.html')
+    return render_template('navbar_templates/chat.html', task = '-'.join(UI_data['TASK'].split(' ')) + "...")
 
 @app.route("/api_access")
 def api_access():
@@ -36,7 +36,7 @@ def user_option():
     logging.info(f"Task generation successfull selected task is = {UI_data["TASK"]}, FROM HTML = {request.form.get("action")}")
     UI_data["PROMPT"] = data[UI_data["TASK"]] if UI_data["TASK"] in data.keys() and UI_data["TASK"] is not None else 'Just Chat'
     logging.info("task page is loading ...")
-    return render_template("navbar_templates/chat.html")
+    return render_template("navbar_templates/chat.html", task = '-'.join(UI_data['TASK'].split(' ')) + "...")
 
 @app.route("/model_info", methods=['GET', 'POST'])
 def model_info():
