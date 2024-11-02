@@ -1,31 +1,73 @@
+/* Footer Base Styles */
 footer {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #2a2a72; /* Darker background for contrast */
+    padding: 40px 20px; /* Increased padding for a more spacious look */
     text-align: center;
-    color: #333;
-    font-size: 0.9em;
-    border-top: 1px solid #ddd;
+    color: #ffffff; /* White text for readability */
+    font-size: 0.95em; /* Slightly larger font size */
+    border-top: 5px solid #ffda79; /* Bolder top border for visual interest */
+    position: relative; /* Allows for positioning of decorative elements */
 }
 
+/* Footer Content */
 .footer-content p {
-    margin: 0;
+    margin: 10px 0; /* Add spacing above and below paragraphs */
+    font-weight: 300; /* Lighter font weight for subtlety */
 }
 
+/* Contact Details */
 .contact-details {
-    list-style-type: none;
+    list-style-type: none; /* Removes bullet points */
     padding: 0;
-    margin: 10px 0 0;
+    margin: 20px 0 0; /* Adjusted margin for separation */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .contact-details li {
-    margin: 5px 0;
+    margin: 0 15px; /* Side spacing between items */
 }
 
+/* Links Styling */
 .contact-details a {
-    color: #333;
-    text-decoration: none;
+    color: #ffda79; /* Golden color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    font-weight: 500; /* Medium font weight */
 }
 
 .contact-details a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
+    color: #ffffff; /* Change color on hover for contrast */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px; /* Spacing above icons */
+}
+
+.social-media a {
+    margin: 0 10px; /* Side spacing for icons */
+    color: #ffda79; /* Match link color */
+    font-size: 1.5em; /* Larger icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.social-media a:hover {
+    color: #ffffff; /* Change icon color on hover */
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    footer {
+        font-size: 0.8em; /* Smaller text on mobile */
+        padding: 30px 10px; /* Adjusted padding for smaller screens */
+    }
+    .contact-details {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
 }

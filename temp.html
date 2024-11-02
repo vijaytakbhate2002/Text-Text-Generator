@@ -1,187 +1,36 @@
-/* chat.css */
+<!DOCTYPE html>
+<html lang="en">
 
-/* Reset styles for a consistent look */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Grammar-Bot {% endblock title%}</title>
+</head>
+    {% block style %}
+    
+    {% endblock style %}
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Profile picture -->
+            <img src="static/images/logo.jpeg" alt="Profile Picture" class="navbar-profile-pic">
 
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align to the top for a more natural chat flow */
-    height: 100vh;
-    background-color: #f5f5f5;
-}
+            <!-- Title -->
+            <h1 class="navbar-title">ChatBot</h1>
 
-/* Sidebar styles */
-.sidebar {
-    width: 220px; /* Slightly wider for better spacing */
-    background-color: #00796b;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 8px 0 0 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-}
+            <!-- Links -->
+            <ul class="navbar-links">
+                <li><a href="{{ url_for('user_guide') }}">User Guide</a></li>
+                <li><a href="{{ url_for('api_access') }}">Use Bot</a></li>
+            </ul>
+            
+        </div>
+    </nav>
 
-.sidebar button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
+  {% block content %}
+  {% endblock content%}
+</body>
 
-.sidebar button:hover {
-    background-color: #004d40;
-}
-
-/* Navbar styles */
-.navbar {
-    width: 100%;
-    background-color: #00796b;
-    padding: 15px 20px; /* Increased padding for a bolder look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-/* Main container adjustments */
-.main-container {
-    display: flex;
-    width: 100%;
-    max-width: 1000px; /* Increased max width for better layout */
-    height: calc(90vh - 60px); /* Adjusted height based on navbar */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 60px; /* Space for navbar height */
-}
-
-/* Navigation and chat containers */
-.nav-container {
-    display: flex;
-    width: 80%;
-    height: 10vh;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.chat-container {
-    flex: 1;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Chat box styles */
-.chat-box {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.message {
-    padding: 12px 15px; /* Increased padding for a better touch target */
-    border-radius: 15px;
-    max-width: 75%;
-    line-height: 1.5;
-}
-
-/* User and bot message styles */
-.user-message {
-    align-self: flex-end;
-    background-color: #e0f7fa;
-    color: #00796b;
-}
-
-.bot-message {
-    align-self: flex-start;
-    background-color: #eeeeee;
-    color: #333;
-}
-
-/* Input container styles */
-.input-container {
-    display: flex;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-
-.input-container form {
-    display: flex;
-    flex: 1;
-}
-
-.input-container input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    font-size: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.input-container button {
-    margin-left: 10px;
-    padding: 10px 15px;
-    background-color: #00796b;
-    color: #ffffff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.input-container button:hover {
-    background-color: #004d40;
-}
-
-/* Watermark styles */
-.watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    color: rgba(108, 97, 97, 0.5);
-    pointer-events: none;
-    z-index: 0;
-    user-select: none;
-}
-
-/* Sidebar active button style */
-.sidebar button.active {
-    background-color: #005b52; /* Darker shade for active state */
-    color: #d5bdbd;
-}
-
-/* Clear button styles */
-#clearButton {
-    background-color: #ff4d4d;
-    color: #fff;
-    border-radius: 5px; /* Rounded corners for clear button */
-}
+</html>
+    

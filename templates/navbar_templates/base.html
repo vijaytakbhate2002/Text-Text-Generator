@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Grammar-Bot {% endblock title%}</title>
-</head>
+    <title>{% block title %} Chat-Bot {% endblock title %}</title>
     {% block style %}
-    
+
     {% endblock style %}
+</head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <!-- Profile picture -->
-            <img src="static/images/profile-pic.png" alt="Profile Picture" class="navbar-profile-pic">
-
-            <!-- Title -->
-            <h1 class="navbar-title">ChatBot</h1>
-
-            <!-- Links -->
-            <ul class="navbar-links">
-                <li><a href="{{ url_for('user_guide') }}">User Guide</a></li>
-                <li><a href="{{ url_for('api_access') }}">Use Bot</a></li>
-            </ul>
-            
-        </div>
+    <nav class="navbar" id="navbar">
+        <img src="static/images/logo.jpeg" alt="Profile Picture" class="navbar-profile-pic">
+        <h1 class="navbar-title">Grammar-Bot</h1>
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a href="{{ url_for('user_guide') }}">User Guide</a></li>
+            <li><a href="{{ url_for('api_access') }}">Use Bot</a></li>
+        </ul>
+        <div class="navbar-menu-icon" onclick="toggleMenu()">☰</div>
     </nav>
 
-  {% block content %}
-  {% endblock content%}
-</body>
+    {% block content %}
+    {% endblock content %}
+<!-- 
+    <script>
+        // Toggle sidebar menu for mobile view
+        function toggleMenu() {
+            document.getElementById("navbarLinks").classList.toggle("active");
+        }
 
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script> -->
+
+    <script>
+        // Toggle sidebar menu for mobile view
+        function toggleMenu() {
+            document.getElementById("navbarLinks").classList.toggle("active");
+        }
+        
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Add animation delay for each link in the sidebar
+        document.querySelectorAll('.navbar-links li').forEach((link, index) => {
+            link.style.animationDelay = `${index * 0.1}s`;
+        });
+        
+    </script>
+
+</body>
 </html>
-    
