@@ -35,7 +35,7 @@ def user_option():
     logging.info(f"UI Rquest = {request.form.get("action")}")
     logging.info(f"Task generation successfull selected task is = {UI_data["TASK"]}, FROM HTML = {request.form.get("action")}")
     UI_data["PROMPT"] = data[UI_data["TASK"]] if UI_data["TASK"] in data.keys() and UI_data["TASK"] is not None else 'Just Chat'
-    logging.info("task page is loading ...")
+    logging.info("chat page is loading ...")
     return render_template("navbar_templates/chat.html", task = '-'.join(UI_data['TASK'].split(' ')) + "...")
 
 @app.route("/model_info", methods=['GET', 'POST'])

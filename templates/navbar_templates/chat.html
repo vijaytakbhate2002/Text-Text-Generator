@@ -1,56 +1,41 @@
-{%extends "navbar_templates/base.html"%}
 
-{% block title %}
-chat-bot
-{% endblock title %}
+{% extends "navbar_templates/base.html" %}
+
+{% block title %}chat-bot{% endblock title %}
 
 {% block style %}
-
 <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
-
 {% endblock style %}
 
 {% block content %}
-
 <div class="main-container">
     <div class="sidebar">
-        <form action="/task" method="POST" id="actionForm">
-            <button type="submit" onclick="return selectAction('Paraphraser')"><span>🔄</span> Paraphraser</button>
-            <button type="submit" onclick="return selectAction('Grammar Checker')"><span>✍️</span> Grammar
-                Checker</button>
-            <button type="submit" onclick="return selectAction('AI Detector')"><span>🤖</span> AI Detector</button>
-            <button type="submit" onclick="return selectAction('Plagiarism Checker')"><span>📑</span> Plagiarism
-                Checker</button>
-            <button type="submit" onclick="return selectAction('Summarizer')"><span>📝</span> Summarizer</button>
-            <button type="submit" onclick="return selectAction('Short Answer')"><span>🔄</span> Short Answer</button>
-
-            <button type="submit" id="clearButton" onclick="return selectAction('Just Chat')">💬 Just Chat</button>
+        <form action="/task" method="GET" id="actionForm">
+            <button type="submit" id="paraphraserButton"><span>🔄</span> Paraphraser</button>
+            <button type="submit" id="grammarCheckerButton"><span>✍️</span> Grammar Checker</button>
+            <button type="submit" id="aiDetectorButton"><span>🤖</span> AI Detector</button>
+            <button type="submit" id="plagiarismCheckerButton"><span>📑</span> Plagiarism Checker</button>
+            <button type="submit" id="summarizerButton"><span>📝</span> Summarizer</button>
+            <button type="submit" id="shortAnswerButton"><span>🔄</span> Short Answer</button>
+            <button type="submit" id="clearButton">💬 Just Chat</button>
 
             <input type="hidden" name="action" id="selectedAction">
         </form>
     </div>
 
-    <script src="chat.js"></script>
-
-
     <div class="chat-container">
         <div class="chat-box">
             <div class="message bot-message">{{ response }}</div>
         </div>
-
         <div class="watermark">chat-bot</div>
-
         <div class="input-container">
             <form action="/query" method="POST">
-                <input type="text" name="user_input" placeholder={{task}} required>
+                <input type="text" name="user_input" placeholder={{ task }} required>
                 <button type="submit"><span class="send-button-icon">➤</span></button>
             </form>
         </div>
     </div>
 </div>
-
-
-
-
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
 {% endblock content %}

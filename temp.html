@@ -1,183 +1,52 @@
-/* Reset and basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!-- {%extends "navbar_templates/base.html"%}
 
-body {
-    font-family: Arial, sans-serif;
-}
+{% block title %}
+chat-bot
+{% endblock title %}
 
-/* Navbar Styling */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(20, 20, 50, 0.8);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-}
+{% block style %}
 
-.navbar.scrolled {
-    background-color: rgba(20, 20, 50, 0.95);
-}
+<link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
 
-.navbar-container {
-    display: flex;
-    align-items: center;
-}
+{% endblock style %}
 
-.navbar-profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    transition: transform 0.3s ease;
-}
+{% block content %}
 
-.navbar-profile-pic:hover {
-    transform: scale(1.1);
-}
+<div class="main-container">
+    <div class="sidebar">
+        <form action="/task" method="POST" id="actionForm">
+            <button type="submit" onclick="return selectAction('Paraphraser')"><span>🔄</span> Paraphraser</button>
+            <button type="submit" onclick="return selectAction('Grammar Checker')"><span>✍️</span> Grammar
+                Checker</button>
+            <button type="submit" onclick="return selectAction('AI Detector')"><span>🤖</span> AI Detector</button>
+            <button type="submit" onclick="return selectAction('Plagiarism Checker')"><span>📑</span> Plagiarism
+                Checker</button>
+            <button type="submit" onclick="return selectAction('Summarizer')"><span>📝</span> Summarizer</button>
+            <button type="submit" onclick="return selectAction('Short Answer')"><span>🔄</span> Short Answer</button>
 
-.navbar-title {
-    font-size: 24px;
-    color: #ffda79;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 1s ease-in-out;
-}
+            <button type="submit" id="clearButton" onclick="return selectAction('Just Chat')">💬 Just Chat</button>
 
-/* Links Styling */
-.navbar-links {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
-    animation: fadeIn 1.2s ease;
-}
+            <input type="hidden" name="action" id="selectedAction">
+        </form>
+    </div>
 
-.navbar-links li {
-    position: relative;
-}
+    <script src="chat.js"></script>
 
-.navbar-links li a {
-    text-decoration: none;
-    color: #ffda79;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    animation: bounce 0.8s ease forwards;
-}
 
-.navbar-links li a:hover {
-    color: #fff;
-    transform: scale(1.1);
-}
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="message bot-message">{{ response }}</div>
+        </div>
 
-/* Hover Effect for Links */
-.navbar-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #ffda79;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s;
-}
+        <div class="watermark">chat-bot</div>
 
-.navbar-links li a:hover::after {
-    width: 100%;
-}
-
-/* Mobile Navigation */
-.navbar-menu-icon {
-    display: none;
-    font-size: 28px;
-    color: #ffda79;
-    cursor: pointer;
-    animation: fadeIn 1.2s ease;
-}
-
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 250px;
-        background-color: rgba(20, 20, 50, 0.95);
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 60px;
-        padding-left: 20px;
-        transition: transform 0.4s ease, opacity 0.4s ease;
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    .navbar-links.active {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .navbar-menu-icon {
-        display: block;
-    }
-
-    .navbar-profile-pic {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-8px);
-    }
-    60% {
-        transform: translateY(-4px);
-    }
-}
-/* Add this to the end of your existing nav.css file */
-
-/* Body Styling */
-body {
-    padding-top: 75px; /* Adjust this value according to your navbar height */
-}
-
-/* Main Container Adjustments */
-.main-container {
-    display: flex;
-    flex-direction: row;
-    min-height: calc(100vh - 75px); /* Subtract the navbar height */
-}
-
-/* Optional: Adjust Sidebar and Chat Container Height */
-.sidebar {
-    /* Adjust heights or styles as needed */
-    flex: 0 0 250px; /* Example width for sidebar */
-}
-
-.chat-container {
-    flex: 1; /* Take remaining space */
-    overflow-y: auto; /* Enable scrolling if content overflows */
-}
-
-/* Ensure other elements adjust accordingly */
-.input-container {
-    margin-top: 20px; /* Add spacing between input and chat box */
-}
+        <div class="input-container">
+            <form action="/query" method="POST">
+                <input type="text" name="user_input" placeholder={{task}} required>
+                <button type="submit"><span class="send-button-icon">➤</span></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %} -->
