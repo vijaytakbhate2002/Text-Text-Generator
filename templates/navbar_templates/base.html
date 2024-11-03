@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,9 @@
     <link rel="stylesheet" href="path/to/nav.css">
     {% endblock style %}
 </head>
+
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <img src="static/images/logo.jpeg" alt="Profile Picture" class="navbar-profile-pic">
         <h1 class="navbar-title">Grammar-Bot</h1>
@@ -21,7 +22,6 @@
         <div class="navbar-menu-icon" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- Main Content -->
     <div class="main-content">
         {% block content %}
         {% endblock content %}
@@ -30,4 +30,5 @@
     <script src="nav.js"></script>
 
 </body>
+
 </html>

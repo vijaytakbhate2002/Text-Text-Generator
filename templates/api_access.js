@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessage.classList.add("error-message");
     form.appendChild(errorMessage);
 
-    // Form validation and submission handling
     form.addEventListener("submit", (e) => {
         errorMessage.style.display = "none";
 
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Add interactive focus animation on input fields
     [modelNameInput, apiKeyInput].forEach(input => {
         input.addEventListener("focus", () => {
             input.style.boxShadow = "0 0 8px rgba(255, 218, 121, 0.5)";

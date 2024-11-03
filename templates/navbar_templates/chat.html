@@ -1,4 +1,3 @@
-
 {% extends "navbar_templates/base.html" %}
 
 {% block title %}chat-bot{% endblock title %}
@@ -11,24 +10,40 @@
 {% block content %}
 <div class="main-container">
     <div class="sidebar">
-        <form action="/task" method="GET" id="actionForm">
-            <button type="submit" id="paraphraserButton"><span>🔄</span> Paraphraser</button>
-            <button type="submit" id="grammarCheckerButton"><span>✍️</span> Grammar Checker</button>
-            <button type="submit" id="aiDetectorButton"><span>🤖</span> AI Detector</button>
-            <button type="submit" id="plagiarismCheckerButton"><span>📑</span> Plagiarism Checker</button>
-            <button type="submit" id="summarizerButton"><span>📝</span> Summarizer</button>
-            <button type="submit" id="shortAnswerButton"><span>🔄</span> Short Answer</button>
-            <button type="submit" id="clearButton">💬 Just Chat</button>
+        <form action="/task" method="POST" id="actionForm">
+            <button type="submit" id="paraphraserButton" onclick="setAction('Paraphraser')"><span>🔄</span>
+                Paraphraser</button>
+            <button type="submit" id="grammarCheckerButton" onclick="setAction('Grammar Checker')"><span>✍️</span>
+                Grammar Checker</button>
+            <button type="submit" id="aiDetectorButton" onclick="setAction('AI Detector')"><span>🤖</span> AI
+                Detector</button>
+            <button type="submit" id="plagiarismCheckerButton" onclick="setAction('Plagiarism Checker')"><span>📑</span>
+                Plagiarism Checker</button>
+            <button type="submit" id="summarizerButton" onclick="setAction('Summarizer')"><span>📝</span>
+                Summarizer</button>
+            <button type="submit" id="shortAnswerButton" onclick="setAction('Short Answer')"><span>🔄</span> Short
+                Answer</button>
+            <button type="submit" id="clearButton" onclick="setAction('Just Chat')">💬 Just Chat</button>
 
             <input type="hidden" name="action" id="selectedAction">
         </form>
+
     </div>
+
+    <script>
+        function setAction(action) {
+            document.getElementById('selectedAction').value = action;
+        }
+    </script>
+
 
     <div class="chat-container">
         <div class="chat-box">
+            <div class="message bot-message">{{ query_input }}</div>
             <div class="message bot-message">{{ response }}</div>
         </div>
         <div class="watermark">chat-bot</div>
+
         <div class="input-container">
             <form action="/query" method="POST">
                 <input type="text" name="user_input" placeholder={{ task }} required>
