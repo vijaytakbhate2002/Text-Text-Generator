@@ -57,6 +57,3 @@ def text_processor():
 @app.route('/')
 def user_guide():
     return render_template('navbar_templates/user_guide.html')
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
