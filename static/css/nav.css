@@ -89,6 +89,28 @@ body {
     cursor: pointer;
 }
 
+/* New dropdown style for mobile */
+.navbar-dropdown {
+    display: none; /* Hidden by default for desktop */
+    font-size: 18px;
+    padding: 10px;
+    color: #ffda79;
+    background: rgba(20, 20, 50, 0.9);
+    border: none;
+    margin-top: 10px;
+}
+
+/* Display dropdown on smaller screens */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide navbar links */
+    }
+
+    .navbar-dropdown {
+        display: inline-block; /* Show dropdown on mobile */
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-links {
         display: none;

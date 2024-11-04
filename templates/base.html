@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Chat-Bot {% endblock title %}</title>
+
+    {% block style %}
+    {% endblock style %}
+
+    <script>
+        function toggleMenu() {
+            const navbarLinks = document.getElementById("navbarLinks");
+            navbarLinks.classList.toggle("active");
+        }
+
+        function navigateToPage(dropdown) {
+            const url = dropdown.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 10) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <img src="static/images/logo.jpeg" alt="Profile Picture" class="navbar-profile-pic">
+        <h1 class="navbar-title">Grammar-Bot</h1>
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a href="{{ url_for('user_guide') }}">User Guide</a></li>
+            <li><a href="{{ url_for('api_access') }}">Use Bot</a></li>
+        </ul>
+
+        <!-- <div class="navbar-menu-icon" onclick="toggleMenu()">☰</div> -->
+        <select class="navbar-dropdown" onchange="navigateToPage(this)">
+            <option value="">☰</option>
+            <option value="{{ url_for('user_guide') }}">User Guide</option>
+            <option value="{{ url_for('api_access') }}">Use Bot</option>
+        </select>
+    </nav>
+
+    <div class="main-content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+
+</html>

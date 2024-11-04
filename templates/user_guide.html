@@ -1,13 +1,13 @@
-{% extends "navbar_templates/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}
 How to Use - Text-Text Generator Chatbot
 {% endblock title %}
 
 {% block style %}
-<link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/features.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
 {% endblock style %}
 
 {% block content %}
@@ -66,25 +66,7 @@ How to Use - Text-Text Generator Chatbot
         </ul>
     </section>
 </main>
-<script src="user_guide.js">
-</script>
-<!-- <footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Text-Text Generator Chatbot. All rights reserved.</p>
-        <p><strong>Contact Information:</strong></p>
-        <ul class="contact-details">
-            <li><strong>Name:</strong> Vijay Takbhate</li>
-            <li><strong>Email:</strong> <a href="mailto:vijaytakbhate20@gmail.com">vijaytakbhate20@gmail.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+918767363681">+91 8767363681</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/vijaytakbhate"
-                    target="_blank">github.com/vijaytakbhate</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vijaytakbhate"
-                    target="_blank">linkedin.com/in/vijaytakbhate</a></li>
-            <li><strong>Kaggle:</strong> <a href="https://kaggle.com/vijaytakbhate"
-                    target="_blank">kaggle.com/vijaytakbhate</a></li>
-        </ul>
-    </div>
-</footer> -->
+
 <footer>
     <div class="footer-content">
         <div class="profile-pic">
@@ -94,15 +76,16 @@ How to Use - Text-Text Generator Chatbot
         <p><strong>Contact Information:</strong></p>
         <ul class="contact-details">
             <li><strong>Name:</strong> Vijay Takbhate</li>
-            <li><strong>Email:</strong> <a href="mailto:vijaytakbhate20@gmail.com">vijaytakbhate20@gmail.com</a></li>
+            <li><strong>Email:</strong> <a href="mailto:vijaytakbhate20@gmail.com">vijaytakbhate20@gmail.com</a>
+            </li>
             <li><strong>Phone:</strong> <a href="tel:+918767363681">+91 8767363681</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/vijaytakbhate" target="_blank">github.com/vijaytakbhate</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vijaytakbhate" target="_blank">linkedin.com/in/vijaytakbhate</a></li>
-            <li><strong>Kaggle:</strong> <a href="https://kaggle.com/vijaytakbhate" target="_blank">kaggle.com/vijaytakbhate</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/vijaytakbhate"
+                    target="_blank">github.com/vijaytakbhate</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vijaytakbhate"
+                    target="_blank">linkedin.com/in/vijaytakbhate</a></li>
+            <li><strong>Kaggle:</strong> <a href="https://kaggle.com/vijaytakbhate"
+                    target="_blank">kaggle.com/vijaytakbhate</a></li>
         </ul>
     </div>
 </footer>
-
-
-
 {% endblock content %}

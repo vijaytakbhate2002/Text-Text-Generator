@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from markupsafe import Markup
 from text_process.text_generator import TextGenerator
 import json
 
@@ -17,7 +18,7 @@ app = Flask(__name__)
 def bot(response:str="", query_input:str=""):
     global placeholder, UI_data
     placeholder = '-'.join(UI_data['TASK'].split(' ')) + "..."
-    return render_template('navbar_templates/chat.html', task = placeholder, response=response, query_input=query_input)
+    return render_template('chat.html', task = placeholder, response=response, query_input=query_input)
 
 @app.route("/api_access")
 def api_access():
@@ -48,15 +49,27 @@ def text_processor():
         generator.create_client()
         generator.build_completion(user_input=user_input)
         response = generator.generate()
-        response = "Bot: " + response
+        if len(response.strip()) == 0:
+            response = Markup(
+                "You entered wrong model name or You have hit the API usage limit."
+                "Check it from the NVIDIA website: "
+                "<a href='https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct' target='_blank'>"
+                "NVIDIA API Page</a>"
+            )
         return bot(response=response, query_input=query_input)
     except:
-        response=f"Transformer is not working, or you may have reached the API usage limit. Recreate your API from NVIDIA website (MODEL = {UI_data['MODEL']} and API = {UI_data['API']})"
+        response = Markup(
+                "You have hit the API usage limit. "
+                "Recreate your API from the NVIDIA website: "
+                "<a href='https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct' target='_blank'>"
+                "NVIDIA API Page</a>"
+            )
         return bot(response=response, query_input=query_input)
+
 
 @app.route('/')
 def user_guide():
-    return render_template('navbar_templates/user_guide.html')
+    return render_template('user_guide.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
